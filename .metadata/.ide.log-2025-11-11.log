@@ -1,0 +1,757 @@
+2025-11-11 13:09:31,307 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Exception in thread "AWT-EventQueue-0" java.awt.IllegalComponentStateException: component must be showing on the screen to determine its location
+2025-11-11 13:09:31,337 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at java.desktop/java.awt.Component.getLocationOnScreen_NoTreeLock(Component.java:2113)
+2025-11-11 13:09:31,338 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at java.desktop/java.awt.Component.getLocationOnScreen(Component.java:2087)
+2025-11-11 13:09:31,339 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at java.desktop/javax.swing.JPopupMenu.show(JPopupMenu.java:982)
+2025-11-11 13:09:31,340 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at java.desktop/javax.swing.plaf.basic.BasicComboPopup.show(BasicComboPopup.java:235)
+2025-11-11 13:09:31,341 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at java.desktop/javax.swing.plaf.basic.BasicComboPopup.togglePopup(BasicComboPopup.java:1265)
+2025-11-11 13:09:31,343 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at java.desktop/javax.swing.plaf.basic.BasicComboPopup$Handler.mousePressed(BasicComboPopup.java:936)
+2025-11-11 13:09:31,344 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6618)
+2025-11-11 13:09:31,345 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3398)
+2025-11-11 13:09:31,346 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at java.desktop/java.awt.Component.processEvent(Component.java:6386)
+2025-11-11 13:09:31,347 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at java.desktop/java.awt.Container.processEvent(Container.java:2266)
+2025-11-11 13:09:31,347 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:4996)
+2025-11-11 13:09:31,348 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2324)
+2025-11-11 13:09:31,349 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4828)
+2025-11-11 13:09:31,350 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at java.desktop/javax.swing.plaf.basic.BasicTableUI$Handler.repostEvent(BasicTableUI.java:978)
+2025-11-11 13:09:31,351 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at java.desktop/javax.swing.plaf.basic.BasicTableUI$Handler.adjustSelection(BasicTableUI.java:1140)
+2025-11-11 13:09:31,352 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at java.desktop/javax.swing.plaf.basic.BasicTableUI$Handler.mousePressed(BasicTableUI.java:1068)
+2025-11-11 13:09:31,353 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at java.desktop/java.awt.AWTEventMulticaster.mousePressed(AWTEventMulticaster.java:288)
+2025-11-11 13:09:31,354 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at java.desktop/java.awt.AWTEventMulticaster.mousePressed(AWTEventMulticaster.java:287)
+2025-11-11 13:09:31,355 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at java.desktop/java.awt.AWTEventMulticaster.mousePressed(AWTEventMulticaster.java:287)
+2025-11-11 13:09:31,356 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at java.desktop/java.awt.AWTEventMulticaster.mousePressed(AWTEventMulticaster.java:287)
+2025-11-11 13:09:31,357 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at java.desktop/java.awt.Component.processMouseEvent(Component.java:6618)
+2025-11-11 13:09:31,358 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at java.desktop/javax.swing.JComponent.processMouseEvent(JComponent.java:3398)
+2025-11-11 13:09:31,359 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at java.desktop/java.awt.Component.processEvent(Component.java:6386)
+2025-11-11 13:09:31,359 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at java.desktop/java.awt.Container.processEvent(Container.java:2266)
+2025-11-11 13:09:31,360 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at java.desktop/java.awt.Component.dispatchEventImpl(Component.java:4996)
+2025-11-11 13:09:31,362 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2324)
+2025-11-11 13:09:31,363 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4828)
+2025-11-11 13:09:31,364 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4948)
+2025-11-11 13:09:31,365 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Container.java:4572)
+2025-11-11 13:09:31,366 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Container.java:4516)
+2025-11-11 13:09:31,368 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at java.desktop/java.awt.Container.dispatchEventImpl(Container.java:2310)
+2025-11-11 13:09:31,369 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at java.desktop/java.awt.Component.dispatchEvent(Component.java:4828)
+2025-11-11 13:09:31,371 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at java.desktop/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:775)
+2025-11-11 13:09:31,372 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:720)
+2025-11-11 13:09:31,372 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at java.desktop/java.awt.EventQueue$4.run(EventQueue.java:714)
+2025-11-11 13:09:31,373 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+2025-11-11 13:09:31,375 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+2025-11-11 13:09:31,376 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:98)
+2025-11-11 13:09:31,377 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:747)
+2025-11-11 13:09:31,378 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at java.desktop/java.awt.EventQueue$5.run(EventQueue.java:745)
+2025-11-11 13:09:31,379 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+2025-11-11 13:09:31,380 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:87)
+2025-11-11 13:09:31,381 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at java.desktop/java.awt.EventQueue.dispatchEvent(EventQueue.java:744)
+2025-11-11 13:09:31,382 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+2025-11-11 13:09:31,383 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+2025-11-11 13:09:31,385 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+2025-11-11 13:09:31,385 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+2025-11-11 13:09:31,387 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at java.desktop/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+2025-11-11 13:09:31,388 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 	at java.desktop/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+2025-11-11 13:14:41,573 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 393829592 Bytes (1073741824)
+2025-11-11 13:14:42,943 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 426335448 Bytes (1073741824)
+2025-11-11 13:14:45,095 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 531715288 Bytes (1073741824)
+2025-11-11 13:14:45,965 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: SPI
+2025-11-11 13:14:45,966 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: TIM1_8G4
+2025-11-11 13:14:45,966 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: SYS
+2025-11-11 13:14:45,966 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: ADC
+2025-11-11 13:14:45,966 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: RCC
+2025-11-11 13:14:45,966 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: NVIC
+2025-11-11 13:14:45,967 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: USART
+2025-11-11 13:14:45,967 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: DMA
+2025-11-11 13:14:45,968 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: GPIO
+2025-11-11 13:14:45,970 [INFO] CodeGenerator:892 - code generatio: config db path: C:/Users/Александра/.stm32cubemx/databases/DB.6.0.120/db/
+2025-11-11 13:14:45,981 [INFO] Argument:325 - Argument : hdmavalue: null
+2025-11-11 13:14:45,981 [INFO] Argument:327 - 	 sub Args: 
+2025-11-11 13:14:45,982 [INFO] Argument:325 - Argument : Instancevalue: DMA1_Channel1
+2025-11-11 13:14:45,982 [INFO] Argument:335 - Argument : Instancevalue: DMA1_Channel1
+2025-11-11 13:14:45,982 [INFO] Argument:325 - Argument : Initvalue: null
+2025-11-11 13:14:45,982 [INFO] Argument:327 - 	 sub Args: 
+2025-11-11 13:14:45,982 [INFO] Argument:325 - Argument : Requestvalue: DMA_REQUEST_ADC1
+2025-11-11 13:14:45,982 [INFO] Argument:335 - Argument : Requestvalue: DMA_REQUEST_ADC1
+2025-11-11 13:14:45,982 [INFO] Argument:325 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2025-11-11 13:14:45,983 [INFO] Argument:335 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2025-11-11 13:14:45,983 [INFO] Argument:325 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2025-11-11 13:14:45,983 [INFO] Argument:335 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2025-11-11 13:14:45,983 [INFO] Argument:325 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2025-11-11 13:14:45,983 [INFO] Argument:335 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2025-11-11 13:14:45,983 [INFO] Argument:325 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2025-11-11 13:14:45,983 [INFO] Argument:335 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2025-11-11 13:14:45,983 [INFO] Argument:325 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2025-11-11 13:14:45,984 [INFO] Argument:335 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2025-11-11 13:14:45,984 [INFO] Argument:325 - Argument : Modevalue: DMA_CIRCULAR
+2025-11-11 13:14:45,984 [INFO] Argument:335 - Argument : Modevalue: DMA_CIRCULAR
+2025-11-11 13:14:45,984 [INFO] Argument:325 - Argument : Priorityvalue: DMA_PRIORITY_LOW
+2025-11-11 13:14:45,984 [INFO] Argument:335 - Argument : Priorityvalue: DMA_PRIORITY_LOW
+2025-11-11 13:14:45,984 [INFO] Argument:325 - Argument : Lockvalue: null
+2025-11-11 13:14:45,984 [INFO] Argument:335 - Argument : Lockvalue: null
+2025-11-11 13:14:45,984 [INFO] Argument:325 - Argument : Statevalue: null
+2025-11-11 13:14:45,984 [INFO] Argument:335 - Argument : Statevalue: null
+2025-11-11 13:14:45,985 [INFO] Argument:325 - Argument : Parentvalue: null
+2025-11-11 13:14:45,985 [INFO] Argument:335 - Argument : Parentvalue: null
+2025-11-11 13:14:45,985 [INFO] Argument:325 - Argument : XferCpltCallbackvalue: null
+2025-11-11 13:14:45,985 [INFO] Argument:335 - Argument : XferCpltCallbackvalue: null
+2025-11-11 13:14:45,985 [INFO] Argument:325 - Argument : XferHalfCpltCallbackvalue: null
+2025-11-11 13:14:45,985 [INFO] Argument:335 - Argument : XferHalfCpltCallbackvalue: null
+2025-11-11 13:14:45,985 [INFO] Argument:325 - Argument : XferErrorCallbackvalue: null
+2025-11-11 13:14:45,985 [INFO] Argument:335 - Argument : XferErrorCallbackvalue: null
+2025-11-11 13:14:45,985 [INFO] Argument:325 - Argument : XferAbortCallbackvalue: null
+2025-11-11 13:14:45,985 [INFO] Argument:335 - Argument : XferAbortCallbackvalue: null
+2025-11-11 13:14:45,985 [INFO] Argument:325 - Argument : ErrorCodevalue: null
+2025-11-11 13:14:45,985 [INFO] Argument:335 - Argument : ErrorCodevalue: null
+2025-11-11 13:14:45,985 [INFO] Argument:325 - Argument : ChannelIndexvalue: null
+2025-11-11 13:14:45,986 [INFO] Argument:335 - Argument : ChannelIndexvalue: null
+2025-11-11 13:14:45,986 [INFO] Argument:325 - Argument : DMAmuxChannelvalue: null
+2025-11-11 13:14:45,986 [INFO] Argument:335 - Argument : DMAmuxChannelvalue: null
+2025-11-11 13:14:45,986 [INFO] Argument:325 - Argument : DMAmuxChannelStatusvalue: null
+2025-11-11 13:14:45,986 [INFO] Argument:335 - Argument : DMAmuxChannelStatusvalue: null
+2025-11-11 13:14:45,986 [INFO] Argument:325 - Argument : DMAmuxChannelStatusMaskvalue: null
+2025-11-11 13:14:45,986 [INFO] Argument:335 - Argument : DMAmuxChannelStatusMaskvalue: null
+2025-11-11 13:14:45,986 [INFO] Argument:325 - Argument : DMAmuxRequestGenvalue: null
+2025-11-11 13:14:45,986 [INFO] Argument:335 - Argument : DMAmuxRequestGenvalue: null
+2025-11-11 13:14:45,987 [INFO] Argument:325 - Argument : DMAmuxRequestGenStatusvalue: null
+2025-11-11 13:14:45,987 [INFO] Argument:335 - Argument : DMAmuxRequestGenStatusvalue: null
+2025-11-11 13:14:45,987 [INFO] Argument:325 - Argument : DMAmuxRequestGenStatusMaskvalue: null
+2025-11-11 13:14:45,987 [INFO] Argument:335 - Argument : DMAmuxRequestGenStatusMaskvalue: null
+2025-11-11 13:14:46,246 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\reserach_dc\reserach_dc\MXTmpFiles\license.tmp_save
+2025-11-11 13:14:46,502 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\reserach_dc\reserach_dc\MXTmpFiles\license.tmp
+2025-11-11 13:14:46,608 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\reserach_dc\reserach_dc\MXTmpFiles\gpio.tmp_save
+2025-11-11 13:14:46,785 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\reserach_dc\reserach_dc\MXTmpFiles\gpio.tmp
+2025-11-11 13:14:47,683 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\reserach_dc\reserach_dc\MXTmpFiles\dma.tmp_save
+2025-11-11 13:14:47,783 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\reserach_dc\reserach_dc\MXTmpFiles\dma.tmp
+2025-11-11 13:14:47,790 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\reserach_dc\reserach_dc\MXTmpFiles\dma_GV.tmp_save
+2025-11-11 13:14:47,888 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\reserach_dc\reserach_dc\MXTmpFiles\dma_GV.tmp
+2025-11-11 13:14:47,915 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\reserach_dc\reserach_dc\Core\Src\stm32g4xx_it.c_save
+2025-11-11 13:14:48,019 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\reserach_dc\reserach_dc\Core\Src\stm32g4xx_it.c
+2025-11-11 13:14:48,031 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\reserach_dc\reserach_dc\Core\Inc\stm32g4xx_it.h_save
+2025-11-11 13:14:48,130 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\reserach_dc\reserach_dc\Core\Inc\stm32g4xx_it.h
+2025-11-11 13:14:48,154 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\reserach_dc\reserach_dc\Core\Src\stm32g4xx_hal_msp.c_save
+2025-11-11 13:14:48,341 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\reserach_dc\reserach_dc\Core\Src\stm32g4xx_hal_msp.c
+2025-11-11 13:14:48,350 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\reserach_dc\reserach_dc\MXTmpFiles\system.tmp_save
+2025-11-11 13:14:48,438 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\reserach_dc\reserach_dc\MXTmpFiles\system.tmp
+2025-11-11 13:14:48,456 [INFO] CodeEngine:321 - oldGeneratedFile, C:\Users\Александра\Documents\reserach_dc\reserach_dc\Core\Inc\stm32g4xx_hal_conf.h_save
+2025-11-11 13:14:48,550 [INFO] CodeEngine:345 - Generated code: C:\Users\Александра\Documents\reserach_dc\reserach_dc\Core\Inc\stm32g4xx_hal_conf.h
+2025-11-11 13:14:48,581 [WARN] IPConfigManager:3238 - Warning: the RefConfig RCC_CommonPeriphClockConfig is not available in your config.xml file
+2025-11-11 13:14:48,585 [WARN] IPConfigManager:3811 - IP not found : TIM
+2025-11-11 13:14:48,586 [WARN] CodeGenerator:4259 - IP not found : null
+2025-11-11 13:14:48,601 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\reserach_dc\reserach_dc\Core\Inc\main.h_save
+2025-11-11 13:14:48,732 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\reserach_dc\reserach_dc\Core\Inc\main.h
+2025-11-11 13:14:48,742 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\reserach_dc\reserach_dc\Core\Src\main.c_save
+2025-11-11 13:14:48,914 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\reserach_dc\reserach_dc\Core\Src\main.c
+2025-11-11 13:14:49,455 [INFO] ProjectBuilder:3606 - Time for Copy HAL[1] : 272mS.
+2025-11-11 13:14:49,462 [INFO] ProjectBuilder:5216 - Project Generator version: 4.7.0-B52
+2025-11-11 13:14:49,635 [INFO] ConfigFileManager:1595 - The Die is : DIE469
+2025-11-11 13:14:51,182 [INFO] ProjectBuilder:5496 - Time for Generating toolchain IDE Files: 1721mS.
+2025-11-11 13:14:51,183 [INFO] ProjectBuilder:3463 - Time for Copy CMSIS : 1mS.
+2025-11-11 13:14:51,188 [INFO] ProjectBuilder:3463 - Time for Copy CMSIS : 0mS.
+2025-11-11 13:16:56,368 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2025-11-11 13:16:58,661 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 911374416 Bytes (1073741824)
+2025-11-11 13:16:59,770 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 394567544 Bytes (1073741824)
+2025-11-11 13:17:01,330 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 467445624 Bytes (1073741824)
+2025-11-11 13:17:01,692 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: SPI
+2025-11-11 13:17:01,692 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: TIM1_8G4
+2025-11-11 13:17:01,693 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: SYS
+2025-11-11 13:17:01,693 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: ADC
+2025-11-11 13:17:01,693 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: RCC
+2025-11-11 13:17:01,693 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: NVIC
+2025-11-11 13:17:01,693 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: USART
+2025-11-11 13:17:01,694 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: DMA
+2025-11-11 13:17:01,694 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: GPIO
+2025-11-11 13:17:01,697 [INFO] CodeGenerator:892 - code generatio: config db path: C:/Users/Александра/.stm32cubemx/databases/DB.6.0.120/db/
+2025-11-11 13:17:01,708 [INFO] Argument:325 - Argument : hdmavalue: null
+2025-11-11 13:17:01,710 [INFO] Argument:327 - 	 sub Args: 
+2025-11-11 13:17:01,710 [INFO] Argument:325 - Argument : Instancevalue: DMA1_Channel1
+2025-11-11 13:17:01,710 [INFO] Argument:335 - Argument : Instancevalue: DMA1_Channel1
+2025-11-11 13:17:01,710 [INFO] Argument:325 - Argument : Initvalue: null
+2025-11-11 13:17:01,710 [INFO] Argument:327 - 	 sub Args: 
+2025-11-11 13:17:01,710 [INFO] Argument:325 - Argument : Requestvalue: DMA_REQUEST_ADC1
+2025-11-11 13:17:01,710 [INFO] Argument:335 - Argument : Requestvalue: DMA_REQUEST_ADC1
+2025-11-11 13:17:01,710 [INFO] Argument:325 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2025-11-11 13:17:01,710 [INFO] Argument:335 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2025-11-11 13:17:01,710 [INFO] Argument:325 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2025-11-11 13:17:01,710 [INFO] Argument:335 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2025-11-11 13:17:01,710 [INFO] Argument:325 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2025-11-11 13:17:01,711 [INFO] Argument:335 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2025-11-11 13:17:01,711 [INFO] Argument:325 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2025-11-11 13:17:01,711 [INFO] Argument:335 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2025-11-11 13:17:01,711 [INFO] Argument:325 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2025-11-11 13:17:01,711 [INFO] Argument:335 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2025-11-11 13:17:01,711 [INFO] Argument:325 - Argument : Modevalue: DMA_CIRCULAR
+2025-11-11 13:17:01,711 [INFO] Argument:335 - Argument : Modevalue: DMA_CIRCULAR
+2025-11-11 13:17:01,711 [INFO] Argument:325 - Argument : Priorityvalue: DMA_PRIORITY_LOW
+2025-11-11 13:17:01,711 [INFO] Argument:335 - Argument : Priorityvalue: DMA_PRIORITY_LOW
+2025-11-11 13:17:01,711 [INFO] Argument:325 - Argument : Lockvalue: null
+2025-11-11 13:17:01,711 [INFO] Argument:335 - Argument : Lockvalue: null
+2025-11-11 13:17:01,711 [INFO] Argument:325 - Argument : Statevalue: null
+2025-11-11 13:17:01,711 [INFO] Argument:335 - Argument : Statevalue: null
+2025-11-11 13:17:01,711 [INFO] Argument:325 - Argument : Parentvalue: null
+2025-11-11 13:17:01,711 [INFO] Argument:335 - Argument : Parentvalue: null
+2025-11-11 13:17:01,711 [INFO] Argument:325 - Argument : XferCpltCallbackvalue: null
+2025-11-11 13:17:01,711 [INFO] Argument:335 - Argument : XferCpltCallbackvalue: null
+2025-11-11 13:17:01,711 [INFO] Argument:325 - Argument : XferHalfCpltCallbackvalue: null
+2025-11-11 13:17:01,711 [INFO] Argument:335 - Argument : XferHalfCpltCallbackvalue: null
+2025-11-11 13:17:01,711 [INFO] Argument:325 - Argument : XferErrorCallbackvalue: null
+2025-11-11 13:17:01,711 [INFO] Argument:335 - Argument : XferErrorCallbackvalue: null
+2025-11-11 13:17:01,711 [INFO] Argument:325 - Argument : XferAbortCallbackvalue: null
+2025-11-11 13:17:01,711 [INFO] Argument:335 - Argument : XferAbortCallbackvalue: null
+2025-11-11 13:17:01,711 [INFO] Argument:325 - Argument : ErrorCodevalue: null
+2025-11-11 13:17:01,712 [INFO] Argument:335 - Argument : ErrorCodevalue: null
+2025-11-11 13:17:01,712 [INFO] Argument:325 - Argument : ChannelIndexvalue: null
+2025-11-11 13:17:01,712 [INFO] Argument:335 - Argument : ChannelIndexvalue: null
+2025-11-11 13:17:01,712 [INFO] Argument:325 - Argument : DMAmuxChannelvalue: null
+2025-11-11 13:17:01,713 [INFO] Argument:335 - Argument : DMAmuxChannelvalue: null
+2025-11-11 13:17:01,713 [INFO] Argument:325 - Argument : DMAmuxChannelStatusvalue: null
+2025-11-11 13:17:01,713 [INFO] Argument:335 - Argument : DMAmuxChannelStatusvalue: null
+2025-11-11 13:17:01,713 [INFO] Argument:325 - Argument : DMAmuxChannelStatusMaskvalue: null
+2025-11-11 13:17:01,713 [INFO] Argument:335 - Argument : DMAmuxChannelStatusMaskvalue: null
+2025-11-11 13:17:01,713 [INFO] Argument:325 - Argument : DMAmuxRequestGenvalue: null
+2025-11-11 13:17:01,713 [INFO] Argument:335 - Argument : DMAmuxRequestGenvalue: null
+2025-11-11 13:17:01,713 [INFO] Argument:325 - Argument : DMAmuxRequestGenStatusvalue: null
+2025-11-11 13:17:01,713 [INFO] Argument:335 - Argument : DMAmuxRequestGenStatusvalue: null
+2025-11-11 13:17:01,713 [INFO] Argument:325 - Argument : DMAmuxRequestGenStatusMaskvalue: null
+2025-11-11 13:17:01,713 [INFO] Argument:335 - Argument : DMAmuxRequestGenStatusMaskvalue: null
+2025-11-11 13:17:01,855 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\reserach_dc\reserach_dc\MXTmpFiles\license.tmp_save
+2025-11-11 13:17:01,941 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\reserach_dc\reserach_dc\MXTmpFiles\license.tmp
+2025-11-11 13:17:01,988 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\reserach_dc\reserach_dc\MXTmpFiles\gpio.tmp_save
+2025-11-11 13:17:02,065 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\reserach_dc\reserach_dc\MXTmpFiles\gpio.tmp
+2025-11-11 13:17:02,498 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\reserach_dc\reserach_dc\MXTmpFiles\dma.tmp_save
+2025-11-11 13:17:02,575 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\reserach_dc\reserach_dc\MXTmpFiles\dma.tmp
+2025-11-11 13:17:02,582 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\reserach_dc\reserach_dc\MXTmpFiles\dma_GV.tmp_save
+2025-11-11 13:17:02,654 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\reserach_dc\reserach_dc\MXTmpFiles\dma_GV.tmp
+2025-11-11 13:17:02,677 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\reserach_dc\reserach_dc\Core\Src\stm32g4xx_it.c_save
+2025-11-11 13:17:02,756 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\reserach_dc\reserach_dc\Core\Src\stm32g4xx_it.c
+2025-11-11 13:17:02,766 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\reserach_dc\reserach_dc\Core\Inc\stm32g4xx_it.h_save
+2025-11-11 13:17:02,861 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\reserach_dc\reserach_dc\Core\Inc\stm32g4xx_it.h
+2025-11-11 13:17:02,883 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\reserach_dc\reserach_dc\Core\Src\stm32g4xx_hal_msp.c_save
+2025-11-11 13:17:03,002 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\reserach_dc\reserach_dc\Core\Src\stm32g4xx_hal_msp.c
+2025-11-11 13:17:03,008 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\reserach_dc\reserach_dc\MXTmpFiles\system.tmp_save
+2025-11-11 13:17:03,090 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\reserach_dc\reserach_dc\MXTmpFiles\system.tmp
+2025-11-11 13:17:03,104 [INFO] CodeEngine:321 - oldGeneratedFile, C:\Users\Александра\Documents\reserach_dc\reserach_dc\Core\Inc\stm32g4xx_hal_conf.h_save
+2025-11-11 13:17:03,182 [INFO] CodeEngine:345 - Generated code: C:\Users\Александра\Documents\reserach_dc\reserach_dc\Core\Inc\stm32g4xx_hal_conf.h
+2025-11-11 13:17:03,203 [WARN] IPConfigManager:3238 - Warning: the RefConfig RCC_CommonPeriphClockConfig is not available in your config.xml file
+2025-11-11 13:17:03,206 [WARN] IPConfigManager:3811 - IP not found : TIM
+2025-11-11 13:17:03,208 [WARN] CodeGenerator:4259 - IP not found : null
+2025-11-11 13:17:03,222 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\reserach_dc\reserach_dc\Core\Inc\main.h_save
+2025-11-11 13:17:03,310 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\reserach_dc\reserach_dc\Core\Inc\main.h
+2025-11-11 13:17:03,319 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\reserach_dc\reserach_dc\Core\Src\main.c_save
+2025-11-11 13:17:03,453 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\reserach_dc\reserach_dc\Core\Src\main.c
+2025-11-11 13:17:03,898 [INFO] ProjectBuilder:3606 - Time for Copy HAL[1] : 221mS.
+2025-11-11 13:17:03,903 [INFO] ProjectBuilder:5216 - Project Generator version: 4.7.0-B52
+2025-11-11 13:17:04,041 [INFO] ConfigFileManager:1595 - The Die is : DIE469
+2025-11-11 13:17:05,433 [INFO] ProjectBuilder:5496 - Time for Generating toolchain IDE Files: 1530mS.
+2025-11-11 13:17:05,435 [INFO] ProjectBuilder:3463 - Time for Copy CMSIS : 1mS.
+2025-11-11 13:17:05,439 [INFO] ProjectBuilder:3463 - Time for Copy CMSIS : 0mS.
+2025-11-11 13:17:34,916 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2025-11-11 13:17:38,783 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 411871096 Bytes (1073741824)
+2025-11-11 13:17:39,958 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 444376952 Bytes (1073741824)
+2025-11-11 13:17:44,206 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 502570872 Bytes (1073741824)
+2025-11-11 13:17:44,506 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: SPI
+2025-11-11 13:17:44,506 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: TIM1_8G4
+2025-11-11 13:17:44,506 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: SYS
+2025-11-11 13:17:44,506 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: ADC
+2025-11-11 13:17:44,506 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: RCC
+2025-11-11 13:17:44,506 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: NVIC
+2025-11-11 13:17:44,506 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: USART
+2025-11-11 13:17:44,506 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: DMA
+2025-11-11 13:17:44,507 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: GPIO
+2025-11-11 13:17:44,508 [INFO] CodeGenerator:892 - code generatio: config db path: C:/Users/Александра/.stm32cubemx/databases/DB.6.0.120/db/
+2025-11-11 13:17:44,520 [INFO] Argument:325 - Argument : hdmavalue: null
+2025-11-11 13:17:44,521 [INFO] Argument:327 - 	 sub Args: 
+2025-11-11 13:17:44,521 [INFO] Argument:325 - Argument : Instancevalue: DMA1_Channel1
+2025-11-11 13:17:44,521 [INFO] Argument:335 - Argument : Instancevalue: DMA1_Channel1
+2025-11-11 13:17:44,521 [INFO] Argument:325 - Argument : Initvalue: null
+2025-11-11 13:17:44,521 [INFO] Argument:327 - 	 sub Args: 
+2025-11-11 13:17:44,521 [INFO] Argument:325 - Argument : Requestvalue: DMA_REQUEST_ADC1
+2025-11-11 13:17:44,521 [INFO] Argument:335 - Argument : Requestvalue: DMA_REQUEST_ADC1
+2025-11-11 13:17:44,521 [INFO] Argument:325 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2025-11-11 13:17:44,521 [INFO] Argument:335 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2025-11-11 13:17:44,521 [INFO] Argument:325 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2025-11-11 13:17:44,521 [INFO] Argument:335 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2025-11-11 13:17:44,521 [INFO] Argument:325 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2025-11-11 13:17:44,521 [INFO] Argument:335 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2025-11-11 13:17:44,521 [INFO] Argument:325 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2025-11-11 13:17:44,521 [INFO] Argument:335 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2025-11-11 13:17:44,521 [INFO] Argument:325 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2025-11-11 13:17:44,521 [INFO] Argument:335 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2025-11-11 13:17:44,521 [INFO] Argument:325 - Argument : Modevalue: DMA_CIRCULAR
+2025-11-11 13:17:44,521 [INFO] Argument:335 - Argument : Modevalue: DMA_CIRCULAR
+2025-11-11 13:17:44,521 [INFO] Argument:325 - Argument : Priorityvalue: DMA_PRIORITY_LOW
+2025-11-11 13:17:44,521 [INFO] Argument:335 - Argument : Priorityvalue: DMA_PRIORITY_LOW
+2025-11-11 13:17:44,521 [INFO] Argument:325 - Argument : Lockvalue: null
+2025-11-11 13:17:44,522 [INFO] Argument:335 - Argument : Lockvalue: null
+2025-11-11 13:17:44,522 [INFO] Argument:325 - Argument : Statevalue: null
+2025-11-11 13:17:44,522 [INFO] Argument:335 - Argument : Statevalue: null
+2025-11-11 13:17:44,522 [INFO] Argument:325 - Argument : Parentvalue: null
+2025-11-11 13:17:44,522 [INFO] Argument:335 - Argument : Parentvalue: null
+2025-11-11 13:17:44,522 [INFO] Argument:325 - Argument : XferCpltCallbackvalue: null
+2025-11-11 13:17:44,522 [INFO] Argument:335 - Argument : XferCpltCallbackvalue: null
+2025-11-11 13:17:44,522 [INFO] Argument:325 - Argument : XferHalfCpltCallbackvalue: null
+2025-11-11 13:17:44,522 [INFO] Argument:335 - Argument : XferHalfCpltCallbackvalue: null
+2025-11-11 13:17:44,522 [INFO] Argument:325 - Argument : XferErrorCallbackvalue: null
+2025-11-11 13:17:44,522 [INFO] Argument:335 - Argument : XferErrorCallbackvalue: null
+2025-11-11 13:17:44,522 [INFO] Argument:325 - Argument : XferAbortCallbackvalue: null
+2025-11-11 13:17:44,522 [INFO] Argument:335 - Argument : XferAbortCallbackvalue: null
+2025-11-11 13:17:44,522 [INFO] Argument:325 - Argument : ErrorCodevalue: null
+2025-11-11 13:17:44,522 [INFO] Argument:335 - Argument : ErrorCodevalue: null
+2025-11-11 13:17:44,522 [INFO] Argument:325 - Argument : ChannelIndexvalue: null
+2025-11-11 13:17:44,522 [INFO] Argument:335 - Argument : ChannelIndexvalue: null
+2025-11-11 13:17:44,522 [INFO] Argument:325 - Argument : DMAmuxChannelvalue: null
+2025-11-11 13:17:44,522 [INFO] Argument:335 - Argument : DMAmuxChannelvalue: null
+2025-11-11 13:17:44,522 [INFO] Argument:325 - Argument : DMAmuxChannelStatusvalue: null
+2025-11-11 13:17:44,522 [INFO] Argument:335 - Argument : DMAmuxChannelStatusvalue: null
+2025-11-11 13:17:44,522 [INFO] Argument:325 - Argument : DMAmuxChannelStatusMaskvalue: null
+2025-11-11 13:17:44,522 [INFO] Argument:335 - Argument : DMAmuxChannelStatusMaskvalue: null
+2025-11-11 13:17:44,523 [INFO] Argument:325 - Argument : DMAmuxRequestGenvalue: null
+2025-11-11 13:17:44,523 [INFO] Argument:335 - Argument : DMAmuxRequestGenvalue: null
+2025-11-11 13:17:44,523 [INFO] Argument:325 - Argument : DMAmuxRequestGenStatusvalue: null
+2025-11-11 13:17:44,523 [INFO] Argument:335 - Argument : DMAmuxRequestGenStatusvalue: null
+2025-11-11 13:17:44,523 [INFO] Argument:325 - Argument : DMAmuxRequestGenStatusMaskvalue: null
+2025-11-11 13:17:44,523 [INFO] Argument:335 - Argument : DMAmuxRequestGenStatusMaskvalue: null
+2025-11-11 13:17:44,677 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\reserach_dc\reserach_dc\MXTmpFiles\license.tmp_save
+2025-11-11 13:17:44,750 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\reserach_dc\reserach_dc\MXTmpFiles\license.tmp
+2025-11-11 13:17:44,800 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\reserach_dc\reserach_dc\MXTmpFiles\gpio.tmp_save
+2025-11-11 13:17:44,865 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\reserach_dc\reserach_dc\MXTmpFiles\gpio.tmp
+2025-11-11 13:17:45,228 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\reserach_dc\reserach_dc\MXTmpFiles\dma.tmp_save
+2025-11-11 13:17:45,345 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\reserach_dc\reserach_dc\MXTmpFiles\dma.tmp
+2025-11-11 13:17:45,351 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\reserach_dc\reserach_dc\MXTmpFiles\dma_GV.tmp_save
+2025-11-11 13:17:45,417 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\reserach_dc\reserach_dc\MXTmpFiles\dma_GV.tmp
+2025-11-11 13:17:45,438 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\reserach_dc\reserach_dc\Core\Src\stm32g4xx_it.c_save
+2025-11-11 13:17:45,522 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\reserach_dc\reserach_dc\Core\Src\stm32g4xx_it.c
+2025-11-11 13:17:45,532 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\reserach_dc\reserach_dc\Core\Inc\stm32g4xx_it.h_save
+2025-11-11 13:17:45,608 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\reserach_dc\reserach_dc\Core\Inc\stm32g4xx_it.h
+2025-11-11 13:17:45,628 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\reserach_dc\reserach_dc\Core\Src\stm32g4xx_hal_msp.c_save
+2025-11-11 13:17:45,738 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\reserach_dc\reserach_dc\Core\Src\stm32g4xx_hal_msp.c
+2025-11-11 13:17:45,746 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\reserach_dc\reserach_dc\MXTmpFiles\system.tmp_save
+2025-11-11 13:17:45,816 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\reserach_dc\reserach_dc\MXTmpFiles\system.tmp
+2025-11-11 13:17:45,833 [INFO] CodeEngine:321 - oldGeneratedFile, C:\Users\Александра\Documents\reserach_dc\reserach_dc\Core\Inc\stm32g4xx_hal_conf.h_save
+2025-11-11 13:17:45,909 [INFO] CodeEngine:345 - Generated code: C:\Users\Александра\Documents\reserach_dc\reserach_dc\Core\Inc\stm32g4xx_hal_conf.h
+2025-11-11 13:17:45,925 [WARN] IPConfigManager:3238 - Warning: the RefConfig RCC_CommonPeriphClockConfig is not available in your config.xml file
+2025-11-11 13:17:45,929 [WARN] IPConfigManager:3811 - IP not found : TIM
+2025-11-11 13:17:45,930 [WARN] CodeGenerator:4259 - IP not found : null
+2025-11-11 13:17:45,941 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\reserach_dc\reserach_dc\Core\Inc\main.h_save
+2025-11-11 13:17:46,017 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\reserach_dc\reserach_dc\Core\Inc\main.h
+2025-11-11 13:17:46,026 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\reserach_dc\reserach_dc\Core\Src\main.c_save
+2025-11-11 13:17:46,163 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\reserach_dc\reserach_dc\Core\Src\main.c
+2025-11-11 13:17:46,733 [INFO] ProjectBuilder:3606 - Time for Copy HAL[1] : 253mS.
+2025-11-11 13:17:46,739 [INFO] ProjectBuilder:5216 - Project Generator version: 4.7.0-B52
+2025-11-11 13:17:46,853 [INFO] ConfigFileManager:1595 - The Die is : DIE469
+2025-11-11 13:17:47,905 [INFO] ProjectBuilder:5496 - Time for Generating toolchain IDE Files: 1166mS.
+2025-11-11 13:17:47,905 [INFO] ProjectBuilder:3463 - Time for Copy CMSIS : 0mS.
+2025-11-11 13:17:47,911 [INFO] ProjectBuilder:3463 - Time for Copy CMSIS : 0mS.
+2025-11-11 18:21:00,922 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2025-11-11 18:33:08,686 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2025-11-11 18:33:09,999 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 552098024 Bytes (1073741824)
+2025-11-11 18:33:11,400 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 582851344 Bytes (1073741824)
+2025-11-11 18:33:15,722 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 713401104 Bytes (1073741824)
+2025-11-11 18:33:16,254 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: SPI
+2025-11-11 18:33:16,255 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: TIM1_8G4
+2025-11-11 18:33:16,255 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: SYS
+2025-11-11 18:33:16,255 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: ADC
+2025-11-11 18:33:16,255 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: RCC
+2025-11-11 18:33:16,255 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: NVIC
+2025-11-11 18:33:16,255 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: USART
+2025-11-11 18:33:16,255 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: DMA
+2025-11-11 18:33:16,256 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: GPIO
+2025-11-11 18:33:16,258 [INFO] CodeGenerator:892 - code generatio: config db path: C:/Users/Александра/.stm32cubemx/databases/DB.6.0.120/db/
+2025-11-11 18:33:16,273 [INFO] Argument:325 - Argument : hdmavalue: null
+2025-11-11 18:33:16,273 [INFO] Argument:327 - 	 sub Args: 
+2025-11-11 18:33:16,274 [INFO] Argument:325 - Argument : Instancevalue: DMA1_Channel1
+2025-11-11 18:33:16,274 [INFO] Argument:335 - Argument : Instancevalue: DMA1_Channel1
+2025-11-11 18:33:16,274 [INFO] Argument:325 - Argument : Initvalue: null
+2025-11-11 18:33:16,274 [INFO] Argument:327 - 	 sub Args: 
+2025-11-11 18:33:16,274 [INFO] Argument:325 - Argument : Requestvalue: DMA_REQUEST_ADC1
+2025-11-11 18:33:16,274 [INFO] Argument:335 - Argument : Requestvalue: DMA_REQUEST_ADC1
+2025-11-11 18:33:16,275 [INFO] Argument:325 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2025-11-11 18:33:16,275 [INFO] Argument:335 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2025-11-11 18:33:16,275 [INFO] Argument:325 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2025-11-11 18:33:16,275 [INFO] Argument:335 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2025-11-11 18:33:16,275 [INFO] Argument:325 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2025-11-11 18:33:16,275 [INFO] Argument:335 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2025-11-11 18:33:16,275 [INFO] Argument:325 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2025-11-11 18:33:16,275 [INFO] Argument:335 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2025-11-11 18:33:16,275 [INFO] Argument:325 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2025-11-11 18:33:16,276 [INFO] Argument:335 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2025-11-11 18:33:16,276 [INFO] Argument:325 - Argument : Modevalue: DMA_CIRCULAR
+2025-11-11 18:33:16,276 [INFO] Argument:335 - Argument : Modevalue: DMA_CIRCULAR
+2025-11-11 18:33:16,276 [INFO] Argument:325 - Argument : Priorityvalue: DMA_PRIORITY_LOW
+2025-11-11 18:33:16,276 [INFO] Argument:335 - Argument : Priorityvalue: DMA_PRIORITY_LOW
+2025-11-11 18:33:16,276 [INFO] Argument:325 - Argument : Lockvalue: null
+2025-11-11 18:33:16,276 [INFO] Argument:335 - Argument : Lockvalue: null
+2025-11-11 18:33:16,276 [INFO] Argument:325 - Argument : Statevalue: null
+2025-11-11 18:33:16,276 [INFO] Argument:335 - Argument : Statevalue: null
+2025-11-11 18:33:16,276 [INFO] Argument:325 - Argument : Parentvalue: null
+2025-11-11 18:33:16,277 [INFO] Argument:335 - Argument : Parentvalue: null
+2025-11-11 18:33:16,277 [INFO] Argument:325 - Argument : XferCpltCallbackvalue: null
+2025-11-11 18:33:16,277 [INFO] Argument:335 - Argument : XferCpltCallbackvalue: null
+2025-11-11 18:33:16,277 [INFO] Argument:325 - Argument : XferHalfCpltCallbackvalue: null
+2025-11-11 18:33:16,277 [INFO] Argument:335 - Argument : XferHalfCpltCallbackvalue: null
+2025-11-11 18:33:16,277 [INFO] Argument:325 - Argument : XferErrorCallbackvalue: null
+2025-11-11 18:33:16,277 [INFO] Argument:335 - Argument : XferErrorCallbackvalue: null
+2025-11-11 18:33:16,277 [INFO] Argument:325 - Argument : XferAbortCallbackvalue: null
+2025-11-11 18:33:16,277 [INFO] Argument:335 - Argument : XferAbortCallbackvalue: null
+2025-11-11 18:33:16,278 [INFO] Argument:325 - Argument : ErrorCodevalue: null
+2025-11-11 18:33:16,278 [INFO] Argument:335 - Argument : ErrorCodevalue: null
+2025-11-11 18:33:16,278 [INFO] Argument:325 - Argument : ChannelIndexvalue: null
+2025-11-11 18:33:16,278 [INFO] Argument:335 - Argument : ChannelIndexvalue: null
+2025-11-11 18:33:16,278 [INFO] Argument:325 - Argument : DMAmuxChannelvalue: null
+2025-11-11 18:33:16,278 [INFO] Argument:335 - Argument : DMAmuxChannelvalue: null
+2025-11-11 18:33:16,278 [INFO] Argument:325 - Argument : DMAmuxChannelStatusvalue: null
+2025-11-11 18:33:16,278 [INFO] Argument:335 - Argument : DMAmuxChannelStatusvalue: null
+2025-11-11 18:33:16,278 [INFO] Argument:325 - Argument : DMAmuxChannelStatusMaskvalue: null
+2025-11-11 18:33:16,278 [INFO] Argument:335 - Argument : DMAmuxChannelStatusMaskvalue: null
+2025-11-11 18:33:16,278 [INFO] Argument:325 - Argument : DMAmuxRequestGenvalue: null
+2025-11-11 18:33:16,278 [INFO] Argument:335 - Argument : DMAmuxRequestGenvalue: null
+2025-11-11 18:33:16,279 [INFO] Argument:325 - Argument : DMAmuxRequestGenStatusvalue: null
+2025-11-11 18:33:16,279 [INFO] Argument:335 - Argument : DMAmuxRequestGenStatusvalue: null
+2025-11-11 18:33:16,279 [INFO] Argument:325 - Argument : DMAmuxRequestGenStatusMaskvalue: null
+2025-11-11 18:33:16,279 [INFO] Argument:335 - Argument : DMAmuxRequestGenStatusMaskvalue: null
+2025-11-11 18:33:16,489 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\reserach_dc\reserach_dc\MXTmpFiles\license.tmp_save
+2025-11-11 18:33:16,890 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\reserach_dc\reserach_dc\MXTmpFiles\license.tmp
+2025-11-11 18:33:17,004 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\reserach_dc\reserach_dc\MXTmpFiles\gpio.tmp_save
+2025-11-11 18:33:17,222 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\reserach_dc\reserach_dc\MXTmpFiles\gpio.tmp
+2025-11-11 18:33:18,259 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\reserach_dc\reserach_dc\MXTmpFiles\dma.tmp_save
+2025-11-11 18:33:18,408 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\reserach_dc\reserach_dc\MXTmpFiles\dma.tmp
+2025-11-11 18:33:18,418 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\reserach_dc\reserach_dc\MXTmpFiles\dma_GV.tmp_save
+2025-11-11 18:33:18,558 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\reserach_dc\reserach_dc\MXTmpFiles\dma_GV.tmp
+2025-11-11 18:33:18,595 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\reserach_dc\reserach_dc\Core\Src\stm32g4xx_it.c_save
+2025-11-11 18:33:19,051 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\reserach_dc\reserach_dc\Core\Src\stm32g4xx_it.c
+2025-11-11 18:33:19,063 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\reserach_dc\reserach_dc\Core\Inc\stm32g4xx_it.h_save
+2025-11-11 18:33:19,175 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\reserach_dc\reserach_dc\Core\Inc\stm32g4xx_it.h
+2025-11-11 18:33:19,202 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\reserach_dc\reserach_dc\Core\Src\stm32g4xx_hal_msp.c_save
+2025-11-11 18:33:19,419 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\reserach_dc\reserach_dc\Core\Src\stm32g4xx_hal_msp.c
+2025-11-11 18:33:19,427 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\reserach_dc\reserach_dc\MXTmpFiles\system.tmp_save
+2025-11-11 18:33:19,543 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\reserach_dc\reserach_dc\MXTmpFiles\system.tmp
+2025-11-11 18:33:19,569 [INFO] CodeEngine:321 - oldGeneratedFile, C:\Users\Александра\Documents\reserach_dc\reserach_dc\Core\Inc\stm32g4xx_hal_conf.h_save
+2025-11-11 18:33:19,745 [INFO] CodeEngine:345 - Generated code: C:\Users\Александра\Documents\reserach_dc\reserach_dc\Core\Inc\stm32g4xx_hal_conf.h
+2025-11-11 18:33:19,780 [WARN] IPConfigManager:3238 - Warning: the RefConfig RCC_CommonPeriphClockConfig is not available in your config.xml file
+2025-11-11 18:33:19,786 [WARN] IPConfigManager:3811 - IP not found : TIM
+2025-11-11 18:33:19,788 [WARN] CodeGenerator:4259 - IP not found : null
+2025-11-11 18:33:19,805 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\reserach_dc\reserach_dc\Core\Inc\main.h_save
+2025-11-11 18:33:19,973 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\reserach_dc\reserach_dc\Core\Inc\main.h
+2025-11-11 18:33:19,987 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\reserach_dc\reserach_dc\Core\Src\main.c_save
+2025-11-11 18:33:20,224 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\reserach_dc\reserach_dc\Core\Src\main.c
+2025-11-11 18:33:20,865 [INFO] ProjectBuilder:3606 - Time for Copy HAL[1] : 374mS.
+2025-11-11 18:33:20,873 [INFO] ProjectBuilder:5216 - Project Generator version: 4.7.0-B52
+2025-11-11 18:33:21,037 [INFO] ConfigFileManager:1595 - The Die is : DIE469
+2025-11-11 18:33:22,834 [INFO] ProjectBuilder:5496 - Time for Generating toolchain IDE Files: 1960mS.
+2025-11-11 18:33:22,835 [INFO] ProjectBuilder:3463 - Time for Copy CMSIS : 1mS.
+2025-11-11 18:33:22,838 [INFO] ProjectBuilder:3463 - Time for Copy CMSIS : 0mS.
+2025-11-11 19:07:52,313 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2025-11-11 19:08:08,577 [INFO] Activator:176 - 
+
+
+2025-11-11 19:08:08,579 [INFO] Activator:177 - !SESSION log4j initialized
+2025-11-11 19:08:15,586 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 
+2025-11-11 19:08:32,727 [INFO] ApplicationProperties:184 - Using Application install path: C:\ST\STM32CubeIDE_1.19.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.15.0.202507011659
+2025-11-11 19:08:32,755 [INFO] DbMcusXml:78 - Set database path to: C:\ST\STM32CubeIDE_1.19.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.15.0.202507011659\\db\/mcu/
+2025-11-11 19:08:32,756 [INFO] ApiDb:274 - Set plugin database path to: C:\ST\STM32CubeIDE_1.19.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.15.0.202507011659\\db\/plugins/boardmanager/
+2025-11-11 19:08:32,756 [WARN] ApiDb:259 - Overriding images path with different value:  => C:\ST\STM32CubeIDE_1.19.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.15.0.202507011659\\db\/plugins/mcufinder/images/
+2025-11-11 19:08:32,771 [INFO] ApiDb:250 - Set database path to: C:\Users\Александра\.stmcufinder\plugins\mcufinder//mcu/
+2025-11-11 19:08:32,773 [INFO] DbMcusAds:125 - Set database path to: C:\Users\Александра\.stmcufinder\plugins\mcufinder//mcu/
+2025-11-11 19:08:32,777 [INFO] CrossReferenceDbSqlite:203 - Set database path to: C:\Users\Александра\.stmcufinder\plugins\mcufinder//mcu/cs/
+2025-11-11 19:08:32,950 [INFO] RulesReader:64 - Compatibility file has been processed (317 Rules)
+2025-11-11 19:08:33,060 [INFO] DbMcusXml:78 - Set database path to: C:\ST\STM32CubeIDE_1.19.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.15.0.202507011659\\db\/mcu/
+2025-11-11 19:08:33,060 [INFO] ApiDb:274 - Set plugin database path to: C:\ST\STM32CubeIDE_1.19.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.15.0.202507011659\\db\/plugins/boardmanager/
+2025-11-11 19:08:33,060 [INFO] ApiDb:261 - Set plugin images path to: C:\ST\STM32CubeIDE_1.19.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.15.0.202507011659\\db\/plugins/mcufinder/images/
+2025-11-11 19:08:33,061 [WARN] DbFile:41 - Overriding database path with different value: C:\Users\Александра\.stmcufinder\plugins\mcufinder/ => C:\Users\Александра\.stmcufinder\plugins\mcufinder
+2025-11-11 19:08:33,061 [INFO] ApiDb:250 - Set database path to: C:\Users\Александра\.stmcufinder\plugins\mcufinder//mcu/
+2025-11-11 19:08:33,061 [WARN] DbFile:41 - Overriding database path with different value: C:\Users\Александра\.stmcufinder\plugins\mcufinder/ => C:\Users\Александра\.stmcufinder\plugins\mcufinder
+2025-11-11 19:08:33,061 [INFO] DbMcusAds:125 - Set database path to: C:\Users\Александра\.stmcufinder\plugins\mcufinder//mcu/
+2025-11-11 19:08:33,061 [WARN] DbFile:41 - Overriding database path with different value: C:\Users\Александра\.stmcufinder\plugins\mcufinder/ => C:\Users\Александра\.stmcufinder\plugins\mcufinder
+2025-11-11 19:08:33,061 [WARN] DbFile:41 - Overriding database path with different value: C:\Users\Александра\.stmcufinder\plugins\mcufinder/ => C:\Users\Александра\.stmcufinder\plugins\mcufinder
+2025-11-11 19:08:33,061 [INFO] CrossReferenceDbSqlite:203 - Set database path to: C:\Users\Александра\.stmcufinder\plugins\mcufinder//mcu/cs/
+2025-11-11 19:08:33,179 [INFO] MainPanel:274 - HeapMemory: 268435456
+2025-11-11 19:08:33,385 [INFO] DbMcusXml:78 - Set database path to: C:\ST\STM32CubeIDE_1.19.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.15.0.202507011659\\db\/mcu/
+2025-11-11 19:08:33,385 [INFO] ApiDb:274 - Set plugin database path to: C:\ST\STM32CubeIDE_1.19.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.15.0.202507011659\\db\/plugins/boardmanager/
+2025-11-11 19:08:33,385 [INFO] ApiDb:261 - Set plugin images path to: C:\ST\STM32CubeIDE_1.19.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.15.0.202507011659\\db\/plugins/mcufinder/images/
+2025-11-11 19:08:33,385 [WARN] DbFile:41 - Overriding database path with different value: C:\Users\Александра\.stmcufinder\plugins\mcufinder/ => C:\Users\Александра\.stmcufinder\plugins\mcufinder
+2025-11-11 19:08:33,385 [INFO] ApiDb:250 - Set database path to: C:\Users\Александра\.stmcufinder\plugins\mcufinder//mcu/
+2025-11-11 19:08:33,385 [WARN] DbFile:41 - Overriding database path with different value: C:\Users\Александра\.stmcufinder\plugins\mcufinder/ => C:\Users\Александра\.stmcufinder\plugins\mcufinder
+2025-11-11 19:08:33,385 [INFO] DbMcusAds:125 - Set database path to: C:\Users\Александра\.stmcufinder\plugins\mcufinder//mcu/
+2025-11-11 19:08:33,385 [WARN] DbFile:41 - Overriding database path with different value: C:\Users\Александра\.stmcufinder\plugins\mcufinder/ => C:\Users\Александра\.stmcufinder\plugins\mcufinder
+2025-11-11 19:08:33,385 [WARN] DbFile:41 - Overriding database path with different value: C:\Users\Александра\.stmcufinder\plugins\mcufinder/ => C:\Users\Александра\.stmcufinder\plugins\mcufinder
+2025-11-11 19:08:33,385 [INFO] CrossReferenceDbSqlite:203 - Set database path to: C:\Users\Александра\.stmcufinder\plugins\mcufinder//mcu/cs/
+2025-11-11 19:08:33,414 [INFO] ApplicationProperties:184 - Using Application install path: C:\ST\STM32CubeIDE_1.19.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.15.0.202507011659
+2025-11-11 19:08:33,417 [INFO] PluginManage:196 - Search for loadable plugins [exclusion list=, ]
+2025-11-11 19:08:33,419 [INFO] PluginManage:310 - Check plugin analytics
+2025-11-11 19:08:38,307 [INFO] AnalyticsPlugin:253 - Accepted Software Licenses: STM32CubeMX.6.15.0,STM32CubeMX.6.13.0,STM32CubeMX.6.12.0
+2025-11-11 19:08:38,307 [INFO] AnalyticsPlugin:255 - Accepted CMSIS Pack Licenses: 
+2025-11-11 19:08:38,308 [INFO] AnalyticsPlugin:257 - Accepted Firmware Licenses: FW.F4.1.28.0,FW.F7.1.17.0,FW.G0.1.6.0,FW.G4.1.6.0,FW.H5.1.3.0,FW.H7.1.11.0,FW.L4.1.18.0,FW.L5.1.5.0,FW.U5.1.6.0,FW.WB.1.20.0
+2025-11-11 19:08:38,311 [INFO] PluginManage:359 - Loaded plugin analytics (category:tool,tabindex:-1)
+2025-11-11 19:08:38,312 [INFO] PluginManage:310 - Check plugin cadmodel
+2025-11-11 19:08:38,321 [INFO] CADModel:105 - Init CAD model plugin
+2025-11-11 19:08:38,322 [INFO] PluginManage:359 - Loaded plugin cadmodel (category:power,tabindex:5)
+2025-11-11 19:08:38,322 [INFO] PluginManage:310 - Check plugin clock
+2025-11-11 19:08:38,335 [INFO] PluginManage:359 - Loaded plugin clock (category:base,tabindex:2)
+2025-11-11 19:08:38,335 [INFO] PluginManage:310 - Check plugin ddr
+2025-11-11 19:08:38,339 [INFO] PluginManage:359 - Loaded plugin ddr (category:tool,tabindex:6)
+2025-11-11 19:08:38,341 [INFO] PluginManage:310 - Check plugin filemanager
+2025-11-11 19:08:38,544 [INFO] PluginManage:359 - Loaded plugin filemanager (category:base,tabindex:10)
+2025-11-11 19:08:38,544 [INFO] PluginManage:310 - Check plugin ipmanager
+2025-11-11 19:08:38,554 [INFO] PluginManage:359 - Loaded plugin ipmanager (category:base,tabindex:5)
+2025-11-11 19:08:38,554 [INFO] PluginManage:310 - Check plugin lpbam
+2025-11-11 19:08:38,565 [INFO] PluginManage:359 - Loaded plugin lpbam (category:base,tabindex:0)
+2025-11-11 19:08:38,566 [INFO] PluginManage:310 - Check plugin memorymap
+2025-11-11 19:08:38,587 [INFO] PluginManage:359 - Loaded plugin memorymap (category:base,tabindex:4)
+2025-11-11 19:08:38,588 [INFO] PluginManage:310 - Check plugin pinoutandconfiguration
+2025-11-11 19:08:38,602 [INFO] PluginManage:359 - Loaded plugin pinoutandconfiguration (category:base,tabindex:1)
+2025-11-11 19:08:38,602 [INFO] PluginManage:310 - Check plugin pinoutconfig
+2025-11-11 19:08:38,767 [WARN] SupportedApi:132 - Cannot load RTOS API schema: s4s-elt-must-match.1: The content of 'definitions' must match (annotation?, (simpleType | complexType)?, (unique | key | keyref)*)). A problem was found starting at: attribute.
+2025-11-11 19:08:38,967 [INFO] PluginManage:359 - Loaded plugin pinoutconfig (category:base,tabindex:0)
+2025-11-11 19:08:38,967 [INFO] PluginManage:310 - Check plugin power
+2025-11-11 19:08:38,984 [INFO] PluginManage:359 - Loaded plugin power (category:power,tabindex:4)
+2025-11-11 19:08:38,984 [INFO] PluginManage:310 - Check plugin projectmanager
+2025-11-11 19:08:39,006 [INFO] PluginManage:359 - Loaded plugin projectmanager (category:projectmanager,tabindex:4)
+2025-11-11 19:08:39,006 [INFO] PluginManage:310 - Check plugin rif
+2025-11-11 19:08:39,017 [INFO] PluginManage:359 - Loaded plugin rif (category:base,tabindex:3)
+2025-11-11 19:08:39,018 [INFO] PluginManage:310 - Check plugin thirdparty
+2025-11-11 19:08:39,220 [INFO] PluginManage:359 - Loaded plugin thirdparty (category:base,tabindex:-1)
+2025-11-11 19:08:39,220 [WARN] IntegrityCheckThread:84 - waiting for thirdparty lock release [integrity check]
+2025-11-11 19:08:39,220 [INFO] PluginManage:310 - Check plugin tools
+2025-11-11 19:08:39,220 [INFO] IntegrityCheckThread:86 - entering critical section [integrity check]
+2025-11-11 19:08:39,221 [INFO] ThirdPartyUpdaterWithRetryManager:70 - Updater plugin not ready yet. [1/15]
+2025-11-11 19:08:39,224 [INFO] PluginManage:359 - Loaded plugin tools (category:base,tabindex:7)
+2025-11-11 19:08:39,224 [INFO] PluginManage:310 - Check plugin tutovideos
+2025-11-11 19:08:39,513 [INFO] PluginManage:359 - Loaded plugin tutovideos (category:base,tabindex:-1)
+2025-11-11 19:08:39,513 [INFO] PluginManage:310 - Check plugin updater
+2025-11-11 19:08:39,543 [INFO] PluginManage:359 - Loaded plugin updater (category:base,tabindex:12)
+2025-11-11 19:08:39,544 [INFO] PluginManage:310 - Check plugin userauth
+2025-11-11 19:08:39,550 [INFO] UserAuth:118 - Init User Auth plugin
+2025-11-11 19:08:39,552 [INFO] PluginManage:359 - Loaded plugin userauth (category:base,tabindex:14)
+2025-11-11 19:08:39,552 [INFO] PluginManage:283 - PluginManage : Loaded plugins [18]
+2025-11-11 19:08:39,865 [INFO] PinOutPanel:1589 - setPackage(No Configuration,No Configuration)
+2025-11-11 19:08:39,980 [INFO] CADModel:165 - CPN selected for project level
+2025-11-11 19:08:39,981 [INFO] CADModel:114 - Register for checkConnection events
+2025-11-11 19:08:40,005 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-11-11 19:08:40,005 [INFO] PluginManager:220 - loadIPPluginJar : add adc
+2025-11-11 19:08:40,010 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-11-11 19:08:40,010 [INFO] PluginManager:220 - loadIPPluginJar : add aes
+2025-11-11 19:08:40,015 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-11-11 19:08:40,015 [INFO] PluginManager:220 - loadIPPluginJar : add can
+2025-11-11 19:08:40,018 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-11-11 19:08:40,018 [INFO] PluginManager:220 - loadIPPluginJar : add comp
+2025-11-11 19:08:40,021 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-11-11 19:08:40,021 [INFO] PluginManager:220 - loadIPPluginJar : add cryp
+2025-11-11 19:08:40,027 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-11-11 19:08:40,027 [INFO] PluginManager:220 - loadIPPluginJar : add ddr_ctrl_phy
+2025-11-11 19:08:40,031 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-11-11 19:08:40,031 [INFO] PluginManager:220 - loadIPPluginJar : add dfsdm
+2025-11-11 19:08:40,038 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-11-11 19:08:40,039 [INFO] PluginManager:220 - loadIPPluginJar : add dma
+2025-11-11 19:08:40,042 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-11-11 19:08:40,043 [INFO] PluginManager:220 - loadIPPluginJar : add dma3
+2025-11-11 19:08:40,046 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-11-11 19:08:40,047 [INFO] PluginManager:220 - loadIPPluginJar : add extmemmanager
+2025-11-11 19:08:40,049 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-11-11 19:08:40,049 [INFO] PluginManager:220 - loadIPPluginJar : add fatfs
+2025-11-11 19:08:40,055 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-11-11 19:08:40,055 [INFO] PluginManager:220 - loadIPPluginJar : add fmc
+2025-11-11 19:08:40,063 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-11-11 19:08:40,064 [INFO] PluginManager:220 - loadIPPluginJar : add freertos
+2025-11-11 19:08:40,065 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-11-11 19:08:40,066 [INFO] PluginManager:220 - loadIPPluginJar : add genericplugin
+2025-11-11 19:08:40,069 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-11-11 19:08:40,070 [INFO] PluginManager:220 - loadIPPluginJar : add gfxmmu
+2025-11-11 19:08:40,075 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-11-11 19:08:40,076 [INFO] PluginManager:220 - loadIPPluginJar : add gic
+2025-11-11 19:08:40,081 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-11-11 19:08:40,081 [INFO] PluginManager:220 - loadIPPluginJar : add gpio
+2025-11-11 19:08:40,085 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-11-11 19:08:40,086 [INFO] PluginManager:220 - loadIPPluginJar : add gtzc
+2025-11-11 19:08:40,089 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-11-11 19:08:40,089 [INFO] PluginManager:220 - loadIPPluginJar : add hash
+2025-11-11 19:08:40,094 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-11-11 19:08:40,094 [INFO] PluginManager:220 - loadIPPluginJar : add i2c
+2025-11-11 19:08:40,098 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-11-11 19:08:40,098 [INFO] PluginManager:220 - loadIPPluginJar : add i2s
+2025-11-11 19:08:40,103 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-11-11 19:08:40,103 [INFO] PluginManager:220 - loadIPPluginJar : add i3c
+2025-11-11 19:08:40,107 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-11-11 19:08:40,108 [INFO] PluginManager:220 - loadIPPluginJar : add ipddr
+2025-11-11 19:08:40,116 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-11-11 19:08:40,117 [INFO] PluginManager:220 - loadIPPluginJar : add linkedlist
+2025-11-11 19:08:40,122 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-11-11 19:08:40,122 [INFO] PluginManager:220 - loadIPPluginJar : add lorawan
+2025-11-11 19:08:40,125 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-11-11 19:08:40,125 [INFO] PluginManager:220 - loadIPPluginJar : add ltdc
+2025-11-11 19:08:40,133 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-11-11 19:08:40,133 [INFO] PluginManager:220 - loadIPPluginJar : add mdma
+2025-11-11 19:08:40,138 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-11-11 19:08:40,138 [INFO] PluginManager:220 - loadIPPluginJar : add nvic
+2025-11-11 19:08:40,142 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-11-11 19:08:40,142 [INFO] PluginManager:220 - loadIPPluginJar : add opamp
+2025-11-11 19:08:40,147 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-11-11 19:08:40,147 [INFO] PluginManager:220 - loadIPPluginJar : add openamp
+2025-11-11 19:08:40,152 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-11-11 19:08:40,152 [INFO] PluginManager:220 - loadIPPluginJar : add pdm2pcm
+2025-11-11 19:08:40,160 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-11-11 19:08:40,163 [INFO] PluginManager:220 - loadIPPluginJar : add plateformsettings
+2025-11-11 19:08:40,165 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-11-11 19:08:40,165 [INFO] PluginManager:220 - loadIPPluginJar : add quadspi
+2025-11-11 19:08:40,168 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-11-11 19:08:40,169 [INFO] PluginManager:220 - loadIPPluginJar : add radio
+2025-11-11 19:08:40,175 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-11-11 19:08:40,175 [INFO] PluginManager:220 - loadIPPluginJar : add resmgrutility
+2025-11-11 19:08:40,180 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-11-11 19:08:40,180 [INFO] PluginManager:220 - loadIPPluginJar : add sai
+2025-11-11 19:08:40,184 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-11-11 19:08:40,184 [INFO] PluginManager:220 - loadIPPluginJar : add spi
+2025-11-11 19:08:40,191 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-11-11 19:08:40,191 [INFO] PluginManager:220 - loadIPPluginJar : add stm32_wpan
+2025-11-11 19:08:40,195 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-11-11 19:08:40,195 [INFO] PluginManager:220 - loadIPPluginJar : add tim
+2025-11-11 19:08:40,202 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-11-11 19:08:40,202 [INFO] PluginManager:220 - loadIPPluginJar : add touchsensing
+2025-11-11 19:08:40,205 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-11-11 19:08:40,205 [INFO] PluginManager:220 - loadIPPluginJar : add tracer_emb
+2025-11-11 19:08:40,208 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-11-11 19:08:40,208 [INFO] PluginManager:220 - loadIPPluginJar : add ts
+2025-11-11 19:08:40,211 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-11-11 19:08:40,211 [INFO] PluginManager:220 - loadIPPluginJar : add tsc
+2025-11-11 19:08:40,214 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-11-11 19:08:40,214 [INFO] PluginManager:220 - loadIPPluginJar : add ucpd
+2025-11-11 19:08:40,218 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-11-11 19:08:40,218 [INFO] PluginManager:220 - loadIPPluginJar : add usart
+2025-11-11 19:08:40,223 [INFO] IPUIPlugin:80 - create IPUIPlugin
+2025-11-11 19:08:40,223 [INFO] PluginManager:220 - loadIPPluginJar : add usbx
+2025-11-11 19:08:40,386 [FATAL] Updater:351 - Updater called before beeing initialized
+2025-11-11 19:08:40,428 [INFO] RulesReader:64 - Compatibility file has been processed (317 Rules)
+2025-11-11 19:08:40,445 [INFO] RulesReader:64 - Compatibility file has been processed (317 Rules)
+2025-11-11 19:08:40,458 [INFO] CADModel:165 - CPN selected for project level
+2025-11-11 19:08:40,458 [INFO] CADModel:114 - Register for checkConnection events
+2025-11-11 19:08:40,458 [FATAL] Updater:351 - Updater called before beeing initialized
+2025-11-11 19:08:40,458 [ERROR] CADModel:125 - Updater not yet initialized, retry later 
+2025-11-11 19:08:40,712 [FATAL] Updater:351 - Updater called before beeing initialized
+2025-11-11 19:08:40,716 [INFO] CADModel:165 - CPN selected for project level
+2025-11-11 19:08:40,716 [INFO] CADModel:114 - Register for checkConnection events
+2025-11-11 19:08:40,716 [FATAL] Updater:351 - Updater called before beeing initialized
+2025-11-11 19:08:40,716 [ERROR] CADModel:125 - Updater not yet initialized, retry later 
+2025-11-11 19:08:40,721 [FATAL] Updater:351 - Updater called before beeing initialized
+2025-11-11 19:08:40,879 [FATAL] Updater:351 - Updater called before beeing initialized
+2025-11-11 19:08:40,883 [INFO] DbMcusAds:53 - JSON generation date=Mon Nov 10 13:43:01 MSK 2025 (1762771381096)
+2025-11-11 19:08:40,883 [FATAL] Updater:351 - Updater called before beeing initialized
+2025-11-11 19:08:40,937 [WARN] DetailPanel:346 - Failed to get advertising image, set to default
+2025-11-11 19:08:41,025 [FATAL] Updater:351 - Updater called before beeing initialized
+2025-11-11 19:08:41,027 [FATAL] Updater:351 - Updater called before beeing initialized
+2025-11-11 19:08:41,027 [FATAL] Updater:351 - Updater called before beeing initialized
+2025-11-11 19:08:41,027 [WARN] DetailPanel:346 - Failed to get advertising image, set to default
+2025-11-11 19:08:41,028 [FATAL] Updater:351 - Updater called before beeing initialized
+2025-11-11 19:08:41,098 [ERROR] Updater:1198 - MainUpdater not yet initialized. External WinMGr cannot be set.
+2025-11-11 19:08:41,102 [INFO] Updater:1134 - Updater Version found : 6.15.0
+2025-11-11 19:08:41,127 [INFO] ApplicationProperties:184 - Using Application install path: C:\ST\STM32CubeIDE_1.19.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.15.0.202507011659
+2025-11-11 19:08:41,794 [INFO] MainUpdater:2872 - connection check result : 10
+2025-11-11 19:08:41,795 [INFO] MainUpdater:289 - Updater Check For Update Now.
+2025-11-11 19:08:41,796 [INFO] MicroXplorer:498 - Change Database Version : DB.6.0.150
+2025-11-11 19:08:41,805 [INFO] McuFinderGlobals:63 - Set McuFinder mode to 2 (CubeIDE integrated)
+2025-11-11 19:08:41,807 [INFO] UserAuth:487 - Internet connection configuration mode: 1
+2025-11-11 19:08:41,841 [INFO] JxBrowserEngine:152 - Initiate JxBrowser Engine with user profile folder
+2025-11-11 19:08:42,073 [INFO] CheckServerUpdateThread:120 - End of CheckServer Thread
+2025-11-11 19:08:42,772 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.FP-SNS-MOTENVWB1.1.4.0
+2025-11-11 19:08:42,787 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.FP-ATR-ASTRA1.2.0.2
+2025-11-11 19:08:42,819 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-SMBUS.2.1.0
+2025-11-11 19:08:42,830 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-ST60.1.0.0
+2025-11-11 19:08:42,883 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AZRTOS-F7.1.1.0
+2025-11-11 19:08:42,898 [WARN] PackLoader:240 - Cannot read IP mode file for Cesanta.I-CUBE-Mongoose.7.19.0
+2025-11-11 19:08:42,907 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.FP-SNS-MOTENV1.5.1.0
+2025-11-11 19:08:42,943 [WARN] PackLoader:240 - Cannot read IP mode file for WES.I-CUBE-Cesium.1.4.0
+2025-11-11 19:08:42,984 [WARN] PackLoader:240 - Cannot read IP mode file for Infineon.AIROC-Wi-Fi-Bluetooth-STM32.1.7.1
+2025-11-11 19:08:43,058 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AZRTOS-H7.3.4.0
+2025-11-11 19:08:43,076 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-DISPLAY.3.0.0
+2025-11-11 19:08:43,097 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-NFC10.1.0.0
+2025-11-11 19:08:43,107 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-ST60.1.1.0
+2025-11-11 19:08:43,117 [WARN] PackLoader:240 - Cannot read IP mode file for emotas.I-CUBE-CANOPEN.1.3.0
+2025-11-11 19:08:43,128 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-GNSS1.7.1.0
+2025-11-11 19:08:43,145 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.FP-SNS-STBOX1.2.1.0
+2025-11-11 19:08:43,159 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.FP-SNS-SMARTAG2.1.2.0
+2025-11-11 19:08:43,166 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.FP-SNS-FLIGHT1.5.1.0
+2025-11-11 19:08:43,181 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 1 : Invalid condition id : UX_CORESTACK_Condition cause : null
+2025-11-11 19:08:43,182 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 1 : Invalid condition id : UX_CORESTACK_Condition cause : null
+2025-11-11 19:08:43,185 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 1 : Invalid condition id : UX_CORESTACK_Condition cause : null
+2025-11-11 19:08:43,187 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 1 : Invalid condition id : UX_CORESTACK_Condition cause : null
+2025-11-11 19:08:43,189 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 1 : Invalid condition id : UX_CORESTACK_Condition cause : null
+2025-11-11 19:08:43,207 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AZRTOS-WL.2.0.0
+2025-11-11 19:08:43,242 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.FP-SNS-MOTENV1.5.0.0
+2025-11-11 19:08:43,256 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-BLE2.3.3.0
+2025-11-11 19:08:43,300 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] [ThirdParty] unknown protocol: c
+2025-11-11 19:08:43,301 [WARN] PackLoader:240 - Cannot read IP mode file for Avnet-IOTCONNECT.X-CUBE-iotc-st67-sdk.1.0.0
+2025-11-11 19:08:43,323 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-NFC9.1.0.0
+2025-11-11 19:08:43,343 [WARN] PackLoader:240 - Cannot read IP mode file for wolfSSL.I-CUBE-wolfSSL.5.8.2
+2025-11-11 19:08:43,350 [INFO] WebApp:169 - Instantiating new browser for Auth
+2025-11-11 19:08:43,353 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-BLE1.7.1.0
+2025-11-11 19:08:43,359 [WARN] PackLoader:240 - Cannot read IP mode file for wolfSSL.I-CUBE-wolfMQTT.1.19.2
+2025-11-11 19:08:43,398 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-EEPRMA1.5.2.0
+2025-11-11 19:08:43,423 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-ST67W61.1.1.0
+2025-11-11 19:08:43,467 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AZRTOS-G0.1.1.0
+2025-11-11 19:08:43,492 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-SAFEA1.1.2.2
+2025-11-11 19:08:43,540 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-NFC4.3.0.0
+2025-11-11 19:08:43,555 [WARN] PackLoader:240 - Cannot read IP mode file for EmbeddedOffice.I-CUBE-FS-RTOS.1.0.1
+2025-11-11 19:08:43,564 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-WB05N.2.0.0
+2025-11-11 19:08:43,571 [WARN] PackLoader:240 - Cannot read IP mode file for wolfSSL.I-CUBE-wolfTPM.3.8.0
+2025-11-11 19:08:43,580 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-TCPP.4.2.0
+2025-11-11 19:08:43,590 [WARN] PackLoader:240 - Cannot read IP mode file for RealThread.X-CUBE-RT-Thread_Nano.4.1.1
+2025-11-11 19:08:43,597 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.FP-ATR-SIGFOX1.3.2.0
+2025-11-11 19:08:43,607 [WARN] PackLoader:240 - Cannot read IP mode file for ITTIA_DB.I-CUBE-ITTIADB.8.9.0
+2025-11-11 19:08:43,614 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-ST67W61.1.0.0
+2025-11-11 19:08:43,624 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AI.10.2.0
+2025-11-11 19:08:43,667 [WARN] PackLoader:240 - Cannot read IP mode file for SEGGER.I-CUBE-embOS.1.3.1
+2025-11-11 19:08:43,734 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-ALGOBUILD.1.4.0
+2025-11-11 19:08:43,814 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-MEMS1.11.3.0
+2025-11-11 19:08:44,001 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-PM33A1.1.0.0
+2025-11-11 19:08:44,029 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AZRTOS-F4.1.1.0
+2025-11-11 19:08:44,036 [WARN] PackLoader:240 - Cannot read IP mode file for Avnet-IotConnect.X-CUBE-IoTC-DA16k-PMOD.1.0.0
+2025-11-11 19:08:44,042 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-ISPU.2.1.0
+2025-11-11 19:08:44,057 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-IPS.3.2.0
+2025-11-11 19:08:44,072 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-NFC12.1.0.0
+2025-11-11 19:08:44,096 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AZRTOS-L5.2.0.0
+2025-11-11 19:08:44,109 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-NFC6.3.1.0
+2025-11-11 19:08:44,120 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-FREERTOS.1.3.1
+2025-11-11 19:08:44,128 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-TOUCHGFX.4.26.0
+2025-11-11 19:08:44,137 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.FP-SNS-STAIOTCFT.1.0.0
+2025-11-11 19:08:44,152 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-DPower.1.3.0
+2025-11-11 19:08:44,177 [WARN] ConditionMgr:438 - getConditionDescription Invalid condition id : LAN8742 Phy interface Condition cause : null
+2025-11-11 19:08:44,178 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AZRTOS-L4.2.0.0
+2025-11-11 19:08:44,180 [WARN] ConditionMgr:1044 - genDependencies : Invalid condition id : LAN8742 Phy interface Condition cause : null
+2025-11-11 19:08:44,180 [WARN] ConditionMgr:1044 - genDependencies : Invalid condition id : LAN8742 Phy interface Condition cause : null
+2025-11-11 19:08:44,181 [WARN] ConditionMgr:1044 - genDependencies : Invalid condition id : LAN8742 Phy interface Condition cause : null
+2025-11-11 19:08:44,193 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-SFXS2LP1.4.0.0
+2025-11-11 19:08:44,209 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-BLEMGR.4.1.0
+2025-11-11 19:08:44,232 [WARN] ConditionMgr:438 - getConditionDescription Invalid condition id : UX DEVICE CLASS RTOS Condition cause : null
+2025-11-11 19:08:44,232 [WARN] ConditionMgr:438 - getConditionDescription Invalid condition id : UX DEVICE CLASS RTOS Condition cause : null
+2025-11-11 19:08:44,235 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AZRTOS-WB.2.0.0
+2025-11-11 19:08:44,236 [WARN] ConditionMgr:1044 - genDependencies : Invalid condition id : UX DEVICE CLASS RTOS Condition cause : null
+2025-11-11 19:08:44,237 [WARN] ConditionMgr:1044 - genDependencies : Invalid condition id : UX DEVICE CLASS RTOS Condition cause : null
+2025-11-11 19:08:44,237 [WARN] ConditionMgr:1044 - genDependencies : Invalid condition id : UX DEVICE CLASS RTOS Condition cause : null
+2025-11-11 19:08:44,238 [WARN] ConditionMgr:1044 - genDependencies : Invalid condition id : UX DEVICE CLASS RTOS Condition cause : null
+2025-11-11 19:08:44,238 [WARN] ConditionMgr:1044 - genDependencies : Invalid condition id : UX DEVICE CLASS RTOS Condition cause : null
+2025-11-11 19:08:44,247 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-GNSS1.7.0.1
+2025-11-11 19:08:44,258 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-TOUCHGFX.4.25.0
+2025-11-11 19:08:44,265 [WARN] ConditionMgr:438 - getConditionDescription Invalid condition id : Cortex-A Device cause : null
+2025-11-11 19:08:44,279 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] [ThirdParty] unknown protocol: c
+2025-11-11 19:08:44,280 [WARN] PackLoader:240 - Cannot read IP mode file for quantropi.X-CUBE-qispace-sdk-base.2.1.0
+2025-11-11 19:08:44,280 [WARN] ConditionMgr:1044 - genDependencies : Invalid condition id : Cortex-A Device cause : null
+2025-11-11 19:08:44,280 [WARN] ConditionMgr:1044 - genDependencies : Invalid condition id : Cortex-A Device cause : null
+2025-11-11 19:08:44,280 [WARN] ConditionMgr:1044 - genDependencies : Invalid condition id : Cortex-A Device cause : null
+2025-11-11 19:08:44,301 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-SUBG2.5.0.0
+2025-11-11 19:08:44,338 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AZRTOS-H7RS.1.1.0
+2025-11-11 19:08:44,372 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AZRTOS-G4.2.0.0
+2025-11-11 19:08:44,388 [WARN] PackLoader:240 - Cannot read IP mode file for wolfSSL.I-CUBE-wolfSSH.1.4.20
+2025-11-11 19:08:44,397 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-NFC7.2.0.0
+2025-11-11 19:08:44,419 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-IPS.3.1.0
+2025-11-11 19:08:44,438 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-ALS.1.0.2
+2025-11-11 19:08:44,454 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-STSE01.1.0.0
+2025-11-11 19:08:44,476 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-TOF1.3.4.3
+2025-11-11 19:08:44,504 [INFO] ThirdParty:978 - Integrity check success = true
+2025-11-11 19:08:44,506 [INFO] IntegrityCheckThread:100 - exiting critical section [integrity check]
+2025-11-11 19:08:44,506 [INFO] IntegrityCheckThread:103 - End integrity checks thread
+2025-11-11 19:08:44,877 [INFO] WebApp:463 - Apply proxy settings
+2025-11-11 19:08:44,878 [INFO] WebApp:548 - Chromium requires no authentication
+2025-11-11 19:08:44,893 [INFO] WebApp:491 - Direct internet connection detected
+2025-11-11 19:08:44,933 [INFO] WebApp:900 - Register for checkConnection events
+2025-11-11 19:08:44,933 [INFO] WebApp:463 - Apply proxy settings
+2025-11-11 19:08:44,934 [INFO] WebApp:548 - Chromium requires no authentication
+2025-11-11 19:08:44,935 [INFO] WebApp:491 - Direct internet connection detected
+2025-11-11 19:08:45,173 [INFO] WebApp:225 - Starting web application
+2025-11-11 19:08:45,173 [INFO] WebApp:593 - Web application path used C:\ST\STM32CubeIDE_1.19.0\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.15.0.202507011659\db\plugins\mcufinder\reactClient1\index.html
+2025-11-11 19:08:45,544 [INFO] UserAuth:487 - Internet connection configuration mode: 1
+2025-11-11 19:12:54,458 [INFO] WebApp:191 - Connection restablished
+2025-11-11 19:38:29,683 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
