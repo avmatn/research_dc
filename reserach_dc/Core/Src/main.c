@@ -81,7 +81,31 @@ uint16_t meow = 0 ; // отладочная переменная для тико
 float angle_deg = 0;
 float delta_grad = 0.0f;
 
-// Контур скорости
+//-------Контур тока--------
+float i_ref;
+
+//Te = 0.001
+
+//float Kp_i = 0.3818;
+//float Ki_i = 0.1234;
+
+//Te = 0.01
+
+//float Kp_i = 0.0118;
+//float Ki_i = 0.0038;
+
+//Te = 0.05
+
+float Kp_i = 0.0024;
+float Ki_i = 7.6364e-4;
+
+
+float er_i;
+float u_i;
+float Int_e_i = 0.0f;
+
+// ----------Контур скорости--------------
+//default
 float n_ref;
 float Kp = 4.55e-5f;
 float Ki = 2.6e-6f;
@@ -89,6 +113,10 @@ float er;
 float u;
 float Int_e = 0.0f;
 uint16_t tick_counter = 0;
+
+//для Te = 0.05
+float Tu2 = 0.25;
+float Kp_w = 0.0032;
 
 //Отладочные переменные
 uint8_t adc_fault_init_calibr = 0;
@@ -150,6 +178,15 @@ float sign(float x) {
 // функция выбора направления двигателя в зависимости от знака управления
 void mode_direction(float u){
 	if (u >= 0.0f){
+		HAL_GPIO_WritePin(GPIOA, DIR1_Pin, GPIO_PIN_RESET); //forward
+		}
+	else {
+		HAL_GPIO_WritePin(GPIOA, DIR1_Pin, GPIO_PIN_SET); //reverse
+	}
+}
+
+void mode_direction_i(float u_i){
+	if (u_i >= 0.0f){
 		HAL_GPIO_WritePin(GPIOA, DIR1_Pin, GPIO_PIN_RESET); //forward
 		}
 	else {
@@ -260,7 +297,7 @@ int main(void)
   HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_1);
 
 // вызов функция инициализации предыдущего угла
-  prev_angle_deg = Prev_angle_Init(); // кладем в prev_angle_deg угол, переменная != 0
+ //prev_angle_deg = Prev_angle_Init(); // кладем в prev_angle_deg угол, переменная != 0
 
 
   /* USER CODE END 2 */
@@ -271,6 +308,17 @@ int main(void)
   {
 	  Vadc = (adcbuf[0] / adcdiskr) * Vref;
       I = (Vadc - Vadc_zero) / sens_cur;
+
+	  er_i = i_ref - I;
+	  Int_e_i += Ki_i * er_i;
+	  Int_e_i = saturation(Int_e_i);
+	  u_i = Kp_i * er_i + Int_e_i;
+	  u_i = saturation(u_i);
+	  uint32_t arr = __HAL_TIM_GET_AUTORELOAD(&htim3);
+	  mode_direction_i(u_i);
+
+	  uint32_t pulse = (uint32_t)(fabsf(u_i) * (arr + 1));
+	  __HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_1, pulse);
 
 	  static uint16_t uart_div = 0; // uart в цикле не юзать
 // apb1 = 120 кГц; arr = 999; prescaler = 11 -> 10кГц
@@ -283,10 +331,6 @@ int main(void)
 		  HAL_SPI_TransmitReceive(&hspi1, (uint8_t*)&command, (uint8_t*)&feedback, 1, 100);
 		  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_9, GPIO_PIN_SET);   // CS HIGH
 
-		  /*command = 0xAAAA; // NOP
-		  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_9, GPIO_PIN_RESET); // CS LOW
-		  HAL_SPI_TransmitReceive(&hspi1, (uint8_t*)&command, (uint8_t*)&feedback, 1, 100);
-		  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_9, GPIO_PIN_SET);   // CS HIGH */
 		  uint16_t raw = feedback & 0x3FFF; // 14 бит
 		  angle_deg = (raw * 360.0f) / 16384.0f;
 	  	 }
@@ -306,7 +350,9 @@ int main(void)
 		  prev_angle_deg = angle_deg;
 
 		  er = n_ref - delta;
-		  Int_e += Ki * er;
+		  i_ref = Kp_w * er;
+
+		  /*Int_e += Ki * er;
 		  Int_e = saturation(Int_e);
 		  u = Kp * er + Int_e;
 		  u = saturation(u);
@@ -314,16 +360,9 @@ int main(void)
 		  mode_direction(u);
 
 		  uint32_t pulse = (uint32_t)(fabsf(u) * (arr + 1));
-		  __HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_1, pulse);
+		  __HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_1, pulse); */
 
 	  }
-
-	  //if (++uart_div >= 100) {
-		 // uart_div = 0;
-		//  uprintf("%.3f \r\n", delta);
-	 // }
-
-
 
     /* USER CODE END WHILE */
 
