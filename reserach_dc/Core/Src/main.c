@@ -35,7 +35,7 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-#define adc_arr_n 100
+#define adc_arr_n 1
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -54,26 +54,50 @@ TIM_HandleTypeDef htim3;
 UART_HandleTypeDef huart2;
 
 /* USER CODE BEGIN PV */
-uint16_t adcbuf[adc_arr_n];
-uint8_t  buffer_complete;
+
+//Чтение АЦП
+uint16_t adcbuf[adc_arr_n]; // здесь массив значений ацп
+float Vref = 3.3f;
+float adcdiskr = 4095.0f;
+float sens_cur = 0.185f; //ACS712 5A
+float Vzero = 2.5f;
+float Vadc_zero;
+float Vadc;
+float I;
+
+
+//Флаги
 uint8_t  tick;
 uint8_t	 ticks_init;
+uint8_t  buffer_complete; // флаг на то, что массив готов
+
+//SPI
 uint16_t command, feedback;
 
+//Расчет угла и скорости
 float prev_angle_deg = 0.0f;
 float delta = 0.0f;
-uint16_t meow = 0 ;
+uint16_t meow = 0 ; // отладочная переменная для тиков
 float angle_deg = 0;
 float delta_grad = 0.0f;
 
+// Контур скорости
 float n_ref;
 float Kp = 4.55e-5f;
 float Ki = 2.6e-6f;
 float er;
 float u;
 float Int_e = 0.0f;
-
 uint16_t tick_counter = 0;
+
+//Отладочные переменные
+uint8_t adc_fault_init_calibr = 0;
+uint8_t adc_start_failed = 0;
+uint8_t calibration_poll_timeout = 0;
+uint8_t calibration_done = 0;
+uint8_t reinit = 0;
+
+
 
 /* USER CODE END PV */
 
@@ -104,7 +128,7 @@ float sign(float x) {
     if (x < 0) return -1.0f;
     return 0.0f;
 }
-
+//функция инициализирует угол. то есть до начала цикла в переменной предыдущего угла кладется значение с энкодера
  float Prev_angle_Init () {
 
 		command = 0xFFFF;
@@ -123,7 +147,7 @@ float sign(float x) {
 
 	  return (prev_angle_deg);
 }
-
+// функция выбора направления двигателя в зависимости от знака управления
 void mode_direction(float u){
 	if (u >= 0.0f){
 		HAL_GPIO_WritePin(GPIOA, DIR1_Pin, GPIO_PIN_RESET); //forward
@@ -132,6 +156,7 @@ void mode_direction(float u){
 		HAL_GPIO_WritePin(GPIOA, DIR1_Pin, GPIO_PIN_SET); //reverse
 	}
 }
+// функция ограничения интеграла и управления
 
 float saturation(float x){
 if (fabsf(x) >= 0.95f){
@@ -140,6 +165,50 @@ if (fabsf(x) >= 0.95f){
 return x;
 }
 
+float ADC_autocalibrate(void)
+{
+    // --- сохранить старые настройки ---
+    uint32_t oldTrig    = hadc1.Init.ExternalTrigConv;
+    uint32_t oldTrigEdge = hadc1.Init.ExternalTrigConvEdge;
+
+    // --- временно софтовый запуск ---
+    hadc1.Init.ExternalTrigConv     = ADC_SOFTWARE_START;
+    hadc1.Init.ExternalTrigConvEdge = ADC_EXTERNALTRIGCONVEDGE_NONE;
+    if (HAL_ADC_Init(&hadc1) != HAL_OK) {
+        adc_fault_init_calibr = 1;
+
+        return 0.0f;
+    }
+
+	uint32_t adc_value_calibr = 0;
+	int i;
+	for (i = 0; i < 200; i++) {
+        if (HAL_ADC_Start(&hadc1) != HAL_OK) {
+        	adc_start_failed = 1;
+            continue;
+        }
+
+	    if (HAL_ADC_PollForConversion(&hadc1, 10) != HAL_OK) {
+	    	calibration_poll_timeout = 1;
+	        continue;
+	    }
+
+	    adc_value_calibr += HAL_ADC_GetValue(&hadc1);
+
+	  }
+	  float adc_zero_value = (float)adc_value_calibr / 200.0f;
+	  Vadc_zero = (adc_zero_value / adcdiskr) * Vref;
+	  calibration_done = 1;
+
+	  // --- вернуть старые настройки (TIM3 TRGO) ---
+	  hadc1.Init.ExternalTrigConv     = oldTrig;
+	  hadc1.Init.ExternalTrigConvEdge = oldTrigEdge;
+	  if (HAL_ADC_Init(&hadc1) != HAL_OK) {
+	     reinit = 1;
+	    }
+	  return Vadc_zero;
+
+}
 
 /* USER CODE END PFP */
 
@@ -184,13 +253,14 @@ int main(void)
   MX_SPI1_Init();
   /* USER CODE BEGIN 2 */
 
-
+  Vadc_zero = ADC_autocalibrate();
   HAL_ADCEx_Calibration_Start(&hadc1, ADC_SINGLE_ENDED);
   HAL_ADC_Start_DMA(&hadc1, (uint32_t*)adcbuf, adc_arr_n);
   HAL_TIM_Base_Start_IT(&htim3);
   HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_1);
 
-  Prev_angle_Init(); // кладем в prev_angle_deg угол, переменная != 0
+// вызов функция инициализации предыдущего угла
+  prev_angle_deg = Prev_angle_Init(); // кладем в prev_angle_deg угол, переменная != 0
 
 
   /* USER CODE END 2 */
@@ -199,18 +269,15 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	 /*if(buffer_complete){
-		  buffer_complete = 0;
-	  	  	  for(int i = 0; i < adc_arr_n; i++){
-	  	  		  uprintf(" %u \r\n", adcbuf[i]);
-  }
- }*/
-	  static uint16_t uart_div = 0;
+	  Vadc = (adcbuf[0] / adcdiskr) * Vref;
+      I = (Vadc - Vadc_zero) / sens_cur;
 
+	  static uint16_t uart_div = 0; // uart в цикле не юзать
+// apb1 = 120 кГц; arr = 999; prescaler = 11 -> 10кГц
 	  if(tick) {
 		  tick = 0;
-		  meow ++;
-		  tick_counter ++;
+		  meow ++; // отладка
+		  tick_counter ++; // переменная для чтения скорости на частоте, которая ниже чем у таймера
 		  command = 0xFFFF; // READ ANGLE
 		  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_9, GPIO_PIN_RESET); // CS LOW
 		  HAL_SPI_TransmitReceive(&hspi1, (uint8_t*)&command, (uint8_t*)&feedback, 1, 100);
@@ -222,9 +289,8 @@ int main(void)
 		  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_9, GPIO_PIN_SET);   // CS HIGH */
 		  uint16_t raw = feedback & 0x3FFF; // 14 бит
 		  angle_deg = (raw * 360.0f) / 16384.0f;
-
 	  	 }
-
+	  //ПИ -регулятор и чтение скорости на частоте
 	  if (tick_counter >= 20) {
 		  tick_counter = 0;
 
@@ -239,7 +305,6 @@ int main(void)
 		  delta = (delta_grad * 500.0f) * 60.0f / 360.0f; //об/мин
 		  prev_angle_deg = angle_deg;
 
-		  n_ref = -700; // ob/min
 		  er = n_ref - delta;
 		  Int_e += Ki * er;
 		  Int_e = saturation(Int_e);
@@ -253,24 +318,11 @@ int main(void)
 
 	  }
 
-
-
-
 	  //if (++uart_div >= 100) {
 		 // uart_div = 0;
 		//  uprintf("%.3f \r\n", delta);
 	 // }
-//без фидбека. нужен логический анализатор
 
-	  /*uint16_t pat = 0xFFFF; // 1010 0101 1010 0101
-	  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_9, GPIO_PIN_RESET);
-	  HAL_SPI_Transmit(&hspi1, (uint8_t*)&pat, 1, 100);
-	  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_9, GPIO_PIN_SET);-
-
-	  pat = 0x0000; // READ ANGLE
-	  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_9, GPIO_PIN_RESET); // CS LOW
-	  HAL_SPI_Transmit(&hspi1, (uint8_t*)&pat, 1, 100);
-	  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_9, GPIO_PIN_SET);   // CS HIGH */
 
 
     /* USER CODE END WHILE */

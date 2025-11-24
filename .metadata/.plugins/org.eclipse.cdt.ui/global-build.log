@@ -1,9 +1,9 @@
-18:24:56 **** Incremental Build of configuration Debug for project reserach_dc ****
+13:45:00 **** Incremental Build of configuration Debug for project reserach_dc ****
 make -j8 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G474xx -c -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -u_printf_float -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
 ../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:208:27: warning: unused variable 'uart_div' [-Wunused-variable]
-  208 |           static uint16_t uart_div = 0;
+../Core/Src/main.c:275:27: warning: unused variable 'uart_div' [-Wunused-variable]
+  275 |           static uint16_t uart_div = 0; // uart в цикле не юзать
       |                           ^~~~~~~~
 arm-none-eabi-gcc -o "reserach_dc.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Александра\Documents\reserach_dc\reserach_dc\STM32G474RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="reserach_dc.map" -Wl,--gc-sections -static -u_printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: reserach_dc.elf
@@ -11,24 +11,31 @@ Finished building target: reserach_dc.elf
 arm-none-eabi-size  reserach_dc.elf 
 arm-none-eabi-objdump -h -S reserach_dc.elf  > "reserach_dc.list"
    text	   data	    bss	    dec	    hex	filename
-  43980	    476	   2684	  47140	   b824	reserach_dc.elf
+  45396	    488	   2496	  48380	   bcfc	reserach_dc.elf
 Finished building: default.size.stdout
  
 Finished building: reserach_dc.list
  
-18:25:17 **** Incremental Build of configuration Debug for project reserach_dc ****
+13:45:22 **** Incremental Build of configuration Debug for project reserach_dc ****
 make -j8 all 
 arm-none-eabi-size  reserach_dc.elf 
    text	   data	    bss	    dec	    hex	filename
-  43980	    476	   2684	  47140	   b824	reserach_dc.elf
+  45396	    488	   2496	  48380	   bcfc	reserach_dc.elf
 Finished building: default.size.stdout
  
-18:27:53 **** Incremental Build of configuration Debug for project reserach_dc ****
+15:26:27 **** Incremental Build of configuration Debug for project reserach_dc ****
+make -j8 all 
+arm-none-eabi-size  reserach_dc.elf 
+   text	   data	    bss	    dec	    hex	filename
+  45396	    488	   2496	  48380	   bcfc	reserach_dc.elf
+Finished building: default.size.stdout
+ 
+15:27:06 **** Incremental Build of configuration Debug for project reserach_dc ****
 make -j8 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G474xx -c -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -u_printf_float -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
 ../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:208:27: warning: unused variable 'uart_div' [-Wunused-variable]
-  208 |           static uint16_t uart_div = 0;
+../Core/Src/main.c:275:27: warning: unused variable 'uart_div' [-Wunused-variable]
+  275 |           static uint16_t uart_div = 0; // uart в цикле не юзать
       |                           ^~~~~~~~
 arm-none-eabi-gcc -o "reserach_dc.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Александра\Documents\reserach_dc\reserach_dc\STM32G474RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="reserach_dc.map" -Wl,--gc-sections -static -u_printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: reserach_dc.elf
@@ -36,44 +43,15 @@ Finished building target: reserach_dc.elf
 arm-none-eabi-size  reserach_dc.elf 
 arm-none-eabi-objdump -h -S reserach_dc.elf  > "reserach_dc.list"
    text	   data	    bss	    dec	    hex	filename
-  43980	    476	   2684	  47140	   b824	reserach_dc.elf
+  45404	    488	   2504	  48396	   bd0c	reserach_dc.elf
 Finished building: default.size.stdout
  
 Finished building: reserach_dc.list
  
-18:30:03 **** Incremental Build of configuration Debug for project reserach_dc ****
+16:44:20 **** Incremental Build of configuration Debug for project reserach_dc ****
 make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G474xx -c -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -u_printf_float -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:208:27: warning: unused variable 'uart_div' [-Wunused-variable]
-  208 |           static uint16_t uart_div = 0;
-      |                           ^~~~~~~~
-arm-none-eabi-gcc -o "reserach_dc.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Александра\Documents\reserach_dc\reserach_dc\STM32G474RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="reserach_dc.map" -Wl,--gc-sections -static -u_printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: reserach_dc.elf
- 
 arm-none-eabi-size  reserach_dc.elf 
-arm-none-eabi-objdump -h -S reserach_dc.elf  > "reserach_dc.list"
    text	   data	    bss	    dec	    hex	filename
-  43980	    476	   2684	  47140	   b824	reserach_dc.elf
+  45404	    488	   2504	  48396	   bd0c	reserach_dc.elf
 Finished building: default.size.stdout
- 
-Finished building: reserach_dc.list
- 
-18:42:01 **** Incremental Build of configuration Debug for project reserach_dc ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G474xx -c -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -u_printf_float -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:208:27: warning: unused variable 'uart_div' [-Wunused-variable]
-  208 |           static uint16_t uart_div = 0;
-      |                           ^~~~~~~~
-arm-none-eabi-gcc -o "reserach_dc.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Александра\Documents\reserach_dc\reserach_dc\STM32G474RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="reserach_dc.map" -Wl,--gc-sections -static -u_printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: reserach_dc.elf
- 
-arm-none-eabi-size  reserach_dc.elf 
-arm-none-eabi-objdump -h -S reserach_dc.elf  > "reserach_dc.list"
-   text	   data	    bss	    dec	    hex	filename
-  43980	    476	   2684	  47140	   b824	reserach_dc.elf
-Finished building: default.size.stdout
- 
-Finished building: reserach_dc.list
  
