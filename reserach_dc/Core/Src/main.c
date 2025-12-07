@@ -117,6 +117,8 @@ uint16_t tick_counter = 0;
 //для Te = 0.05
 float Tu2 = 0.25;
 float Kp_w = 0.0032;
+float Ki_w = 0.001f;
+float Int_e_w = 0.0f;
 
 //Отладочные переменные
 uint8_t adc_fault_init_calibr = 0;
@@ -195,9 +197,9 @@ void mode_direction_i(float u_i){
 }
 // функция ограничения интеграла и управления
 
-float saturation(float x){
-if (fabsf(x) >= 0.95f){
-	x = 0.95f * sign(x);
+float saturation(float x, float y){
+if (fabsf(x) >= y){
+	x = y * sign(x);
 }
 return x;
 }
@@ -311,9 +313,9 @@ int main(void)
 
 	  er_i = i_ref - I;
 	  Int_e_i += Ki_i * er_i;
-	  Int_e_i = saturation(Int_e_i);
+	  Int_e_i = saturation(Int_e_i, 0.95f);
 	  u_i = Kp_i * er_i + Int_e_i;
-	  u_i = saturation(u_i);
+	  u_i = saturation(u_i, 0.95f);
 	  uint32_t arr = __HAL_TIM_GET_AUTORELOAD(&htim3);
 	  mode_direction_i(u_i);
 
@@ -350,7 +352,10 @@ int main(void)
 		  prev_angle_deg = angle_deg;
 
 		  er = n_ref - delta;
-		  i_ref = Kp_w * er;
+		  Int_e_w += Ki_w * er;
+		  Int_e_w = saturation(Int_e_w, 2.0f);
+		  i_ref = Kp_w * er + Int_e_w;
+		  i_ref = saturation(i_ref, 2.0f);
 
 		  /*Int_e += Ki * er;
 		  Int_e = saturation(Int_e);
