@@ -314,14 +314,6 @@ int main(void)
 		  tick = 0;
 		  meow ++; // отладка
 		  tick_counter ++; // переменная для чтения скорости на частоте, которая ниже чем у таймера
-		  //----------счет угла------------------------------------
-		  command = 0xFFFF; // READ ANGLE
-		  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_9, GPIO_PIN_RESET); // CS LOW
-		  HAL_SPI_TransmitReceive(&hspi1, (uint8_t*)&command, (uint8_t*)&feedback, 1, 100);
-		  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_9, GPIO_PIN_SET);   // CS HIGH
-
-		  uint16_t raw = feedback & 0x3FFF; // 14 бит
-		  angle_deg = (raw * 360.0f) / 16384.0f;
 
 		  //------------------------current----------------------------
 		  Vadc = (adcbuf[0] / adcdiskr) * Vref;
@@ -337,7 +329,15 @@ int main(void)
 		  uint32_t pulse = (uint32_t)(fabsf(u_i) * (arr + 1));
 		  __HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_1, pulse);
 		  //-----------------------------------------------------
-	  }
+		  //----------счет угла------------------------------------
+		  command = 0xFFFF; // READ ANGLE
+		  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_9, GPIO_PIN_RESET); // CS LOW
+		  HAL_SPI_TransmitReceive(&hspi1, (uint8_t*)&command, (uint8_t*)&feedback, 1, 100);
+		  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_9, GPIO_PIN_SET);   // CS HIGH
+
+		  uint16_t raw = feedback & 0x3FFF; // 14 бит
+		  angle_deg = (raw * 360.0f) / 16384.0f;
+	  	 }
 	  //---------------ПИ -регулятор и чтение скорости на частоте-------------------
 	  if (tick_counter >= 20) {
 		  tick_counter = 0;
@@ -456,8 +456,8 @@ static void MX_ADC1_Init(void)
   hadc1.Init.ContinuousConvMode = DISABLE;
   hadc1.Init.NbrOfConversion = 1;
   hadc1.Init.DiscontinuousConvMode = DISABLE;
-  hadc1.Init.ExternalTrigConv = ADC_SOFTWARE_START;
-  hadc1.Init.ExternalTrigConvEdge = ADC_EXTERNALTRIGCONVEDGE_NONE;
+  hadc1.Init.ExternalTrigConv = ADC_EXTERNALTRIG_T3_TRGO;
+  hadc1.Init.ExternalTrigConvEdge = ADC_EXTERNALTRIGCONVEDGE_RISING;
   hadc1.Init.DMAContinuousRequests = ENABLE;
   hadc1.Init.Overrun = ADC_OVR_DATA_PRESERVED;
   hadc1.Init.OversamplingMode = DISABLE;
@@ -552,7 +552,7 @@ static void MX_TIM3_Init(void)
 
   /* USER CODE END TIM3_Init 1 */
   htim3.Instance = TIM3;
-  htim3.Init.Prescaler = 11;
+  htim3.Init.Prescaler = 11;  // 11 - 10 кГц; 119 - 1 кГц
   htim3.Init.CounterMode = TIM_COUNTERMODE_UP;
   htim3.Init.Period = 999;
   htim3.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
