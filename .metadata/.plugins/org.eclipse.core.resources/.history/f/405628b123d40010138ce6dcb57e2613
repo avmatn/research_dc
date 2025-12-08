@@ -26,7 +26,7 @@
 #include <string.h> // для strlen
 #include <stdlib.h> // math_lib
 #include <math.h> // if (fabsf(delta_grad) > 180.0f)
-/* USER CODE END Includes */
+ /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN PTD */
@@ -115,9 +115,9 @@ float Int_e = 0.0f;
 uint16_t tick_counter = 0;
 
 //для Te = 0.05
-float о = 0.25;
+float Tu2 = 0.25;
 float Kp_w = 0.0032;
-float Ki_w = 0.00001f;
+float Ki_w = 0.001f;
 float Int_e_w = 0.0f;
 
 //Отладочные переменные
@@ -308,28 +308,26 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+	  Vadc = (adcbuf[0] / adcdiskr) * Vref;
+      I = (Vadc - Vadc_zero) / sens_cur;
+
+	  er_i = i_ref - I;
+	  Int_e_i += Ki_i * er_i;
+	  Int_e_i = saturation(Int_e_i, 0.95f);
+	  u_i = Kp_i * er_i + Int_e_i;
+	  u_i = saturation(u_i, 0.95f);
+	  uint32_t arr = __HAL_TIM_GET_AUTORELOAD(&htim3);
+	  mode_direction_i(u_i);
+
+	  uint32_t pulse = (uint32_t)(fabsf(u_i) * (arr + 1));
+	  __HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_1, pulse);
+
 	  static uint16_t uart_div = 0; // uart в цикле не юзать
 // apb1 = 120 кГц; arr = 999; prescaler = 11 -> 10кГц
 	  if(tick) {
 		  tick = 0;
 		  meow ++; // отладка
 		  tick_counter ++; // переменная для чтения скорости на частоте, которая ниже чем у таймера
-
-		  //------------------------current----------------------------
-		  Vadc = (adcbuf[0] / adcdiskr) * Vref;
-	      I = (Vadc - Vadc_zero) / sens_cur;
-		  er_i = i_ref - I;
-		  Int_e_i += Ki_i * er_i;
-		  Int_e_i = saturation(Int_e_i, 0.95f);
-		  u_i = Kp_i * er_i + Int_e_i;
-		  u_i = saturation(u_i, 0.95f);
-		  uint32_t arr = __HAL_TIM_GET_AUTORELOAD(&htim3);
-		  mode_direction_i(u_i);
-
-		  uint32_t pulse = (uint32_t)(fabsf(u_i) * (arr + 1));
-		  __HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_1, pulse);
-		  //-----------------------------------------------------
-		  //----------счет угла------------------------------------
 		  command = 0xFFFF; // READ ANGLE
 		  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_9, GPIO_PIN_RESET); // CS LOW
 		  HAL_SPI_TransmitReceive(&hspi1, (uint8_t*)&command, (uint8_t*)&feedback, 1, 100);
@@ -338,7 +336,7 @@ int main(void)
 		  uint16_t raw = feedback & 0x3FFF; // 14 бит
 		  angle_deg = (raw * 360.0f) / 16384.0f;
 	  	 }
-	  //---------------ПИ -регулятор и чтение скорости на частоте-------------------
+	  //ПИ -регулятор и чтение скорости на частоте
 	  if (tick_counter >= 20) {
 		  tick_counter = 0;
 
@@ -552,7 +550,7 @@ static void MX_TIM3_Init(void)
 
   /* USER CODE END TIM3_Init 1 */
   htim3.Instance = TIM3;
-  htim3.Init.Prescaler = 11;  // 11 - 10 кГц; 119 - 1 кГц
+  htim3.Init.Prescaler = 11;
   htim3.Init.CounterMode = TIM_COUNTERMODE_UP;
   htim3.Init.Period = 999;
   htim3.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
