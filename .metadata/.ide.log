@@ -985,3 +985,265 @@
 2025-12-08 14:30:13,725 [INFO] ProjectBuilder:5496 - Time for Generating toolchain IDE Files: 2303mS.
 2025-12-08 14:30:13,727 [INFO] ProjectBuilder:3463 - Time for Copy CMSIS : 1mS.
 2025-12-08 14:30:13,735 [INFO] ProjectBuilder:3463 - Time for Copy CMSIS : 0mS.
+2025-12-08 15:01:23,003 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2025-12-08 15:01:23,215 [INFO] ADCParametersView:116 -                Rank 1 : true
+2025-12-08 15:01:23,225 [INFO] ADCParametersView:116 -                Rank 1 : true
+2025-12-08 15:01:23,225 [INFO] ADCParametersView:116 -                Rank 1 : true
+2025-12-08 15:01:23,228 [INFO] ADCParametersView:116 -                Rank 1 : true
+2025-12-08 15:01:23,228 [INFO] ADCParametersView:116 -                Rank 1 : true
+2025-12-08 15:01:23,230 [INFO] ADCParametersView:116 -                Rank 1 : true
+2025-12-08 15:01:23,231 [INFO] ADCParametersView:116 -                Rank 1 : true
+2025-12-08 15:01:23,233 [INFO] ADCParametersView:116 -                Rank 1 : true
+2025-12-08 15:01:23,233 [INFO] ADCParametersView:116 -                Rank 1 : true
+2025-12-08 15:01:23,234 [INFO] ADCParametersView:116 -                Rank 1 : true
+2025-12-08 15:01:23,235 [INFO] ADCParametersView:116 -                Rank 1 : true
+2025-12-08 15:01:23,236 [INFO] ADCParametersView:116 -                Rank 1 : true
+2025-12-08 15:01:23,237 [INFO] ADCParametersView:116 -                Rank 1 : true
+2025-12-08 15:01:23,238 [INFO] ADCParametersView:116 -                Rank 1 : true
+2025-12-08 15:01:23,238 [INFO] ADCParametersView:116 -                Rank 1 : true
+2025-12-08 15:01:23,238 [INFO] ADCParametersView:116 -                Rank 1 : true
+2025-12-08 15:01:23,239 [INFO] ADCParametersView:116 -                Rank 1 : true
+2025-12-08 15:01:23,239 [INFO] ADCParametersView:116 -                Rank 1 : true
+2025-12-08 15:01:23,241 [INFO] ADCParametersView:116 -                Rank 1 : true
+2025-12-08 15:01:23,241 [INFO] ADCParametersView:116 -                Rank 1 : true
+2025-12-08 15:01:23,241 [INFO] ADCParametersView:116 -                Rank 1 : true
+2025-12-08 15:01:23,320 [INFO] ADCParametersView:116 -                Rank 1 : true
+2025-12-08 15:01:31,955 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2025-12-08 15:01:32,251 [INFO] ADCParametersView:116 -                Rank 1 : true
+2025-12-08 15:01:32,259 [INFO] ADCParametersView:116 -                Rank 1 : true
+2025-12-08 15:01:32,259 [INFO] ADCParametersView:116 -                Rank 1 : true
+2025-12-08 15:01:32,260 [INFO] ADCParametersView:116 -                Rank 1 : true
+2025-12-08 15:01:32,260 [INFO] ADCParametersView:116 -                Rank 1 : true
+2025-12-08 15:01:32,260 [INFO] ADCParametersView:116 -                Rank 1 : true
+2025-12-08 15:01:32,261 [INFO] ADCParametersView:116 -                Rank 1 : true
+2025-12-08 15:01:32,261 [INFO] ADCParametersView:116 -                Rank 1 : true
+2025-12-08 15:01:32,261 [INFO] ADCParametersView:116 -                Rank 1 : true
+2025-12-08 15:01:32,261 [INFO] ADCParametersView:116 -                Rank 1 : true
+2025-12-08 15:01:32,262 [INFO] ADCParametersView:116 -                Rank 1 : true
+2025-12-08 15:01:32,262 [INFO] ADCParametersView:116 -                Rank 1 : true
+2025-12-08 15:01:32,263 [INFO] ADCParametersView:116 -                Rank 1 : true
+2025-12-08 15:01:32,263 [INFO] ADCParametersView:116 -                Rank 1 : true
+2025-12-08 15:01:32,263 [INFO] ADCParametersView:116 -                Rank 1 : true
+2025-12-08 15:01:32,264 [INFO] ADCParametersView:116 -                Rank 1 : true
+2025-12-08 15:01:32,264 [INFO] ADCParametersView:116 -                Rank 1 : true
+2025-12-08 15:01:32,265 [INFO] ADCParametersView:116 -                Rank 1 : true
+2025-12-08 15:01:32,265 [INFO] ADCParametersView:116 -                Rank 1 : true
+2025-12-08 15:01:32,265 [INFO] ADCParametersView:116 -                Rank 1 : true
+2025-12-08 15:01:32,266 [INFO] ADCParametersView:116 -                Rank 1 : true
+2025-12-08 15:01:32,299 [INFO] ADCParametersView:116 -                Rank 1 : true
+2025-12-08 15:09:59,186 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 582461104 Bytes (827326464)
+2025-12-08 15:10:00,992 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 715130880 Bytes (827326464)
+2025-12-08 15:10:01,612 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 470672192 Bytes (827326464)
+2025-12-08 15:10:02,090 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: SPI
+2025-12-08 15:10:02,091 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: TIM1_8G4
+2025-12-08 15:10:02,091 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: SYS
+2025-12-08 15:10:02,092 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: ADC
+2025-12-08 15:10:02,092 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: RCC
+2025-12-08 15:10:02,092 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: NVIC
+2025-12-08 15:10:02,092 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: USART
+2025-12-08 15:10:02,092 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: DMA
+2025-12-08 15:10:02,093 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: GPIO
+2025-12-08 15:10:02,095 [INFO] CodeGenerator:892 - code generatio: config db path: C:/Users/Александра/.stm32cubemx/databases/DB.6.0.120/db/
+2025-12-08 15:10:02,112 [INFO] Argument:325 - Argument : hdmavalue: null
+2025-12-08 15:10:02,113 [INFO] Argument:327 - 	 sub Args: 
+2025-12-08 15:10:02,113 [INFO] Argument:325 - Argument : Instancevalue: DMA1_Channel1
+2025-12-08 15:10:02,113 [INFO] Argument:335 - Argument : Instancevalue: DMA1_Channel1
+2025-12-08 15:10:02,113 [INFO] Argument:325 - Argument : Initvalue: null
+2025-12-08 15:10:02,114 [INFO] Argument:327 - 	 sub Args: 
+2025-12-08 15:10:02,114 [INFO] Argument:325 - Argument : Requestvalue: DMA_REQUEST_ADC1
+2025-12-08 15:10:02,114 [INFO] Argument:335 - Argument : Requestvalue: DMA_REQUEST_ADC1
+2025-12-08 15:10:02,114 [INFO] Argument:325 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2025-12-08 15:10:02,114 [INFO] Argument:335 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2025-12-08 15:10:02,114 [INFO] Argument:325 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2025-12-08 15:10:02,115 [INFO] Argument:335 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2025-12-08 15:10:02,115 [INFO] Argument:325 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2025-12-08 15:10:02,115 [INFO] Argument:335 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2025-12-08 15:10:02,115 [INFO] Argument:325 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2025-12-08 15:10:02,115 [INFO] Argument:335 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2025-12-08 15:10:02,115 [INFO] Argument:325 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2025-12-08 15:10:02,115 [INFO] Argument:335 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2025-12-08 15:10:02,115 [INFO] Argument:325 - Argument : Modevalue: DMA_CIRCULAR
+2025-12-08 15:10:02,116 [INFO] Argument:335 - Argument : Modevalue: DMA_CIRCULAR
+2025-12-08 15:10:02,116 [INFO] Argument:325 - Argument : Priorityvalue: DMA_PRIORITY_LOW
+2025-12-08 15:10:02,116 [INFO] Argument:335 - Argument : Priorityvalue: DMA_PRIORITY_LOW
+2025-12-08 15:10:02,116 [INFO] Argument:325 - Argument : Lockvalue: null
+2025-12-08 15:10:02,116 [INFO] Argument:335 - Argument : Lockvalue: null
+2025-12-08 15:10:02,116 [INFO] Argument:325 - Argument : Statevalue: null
+2025-12-08 15:10:02,116 [INFO] Argument:335 - Argument : Statevalue: null
+2025-12-08 15:10:02,116 [INFO] Argument:325 - Argument : Parentvalue: null
+2025-12-08 15:10:02,116 [INFO] Argument:335 - Argument : Parentvalue: null
+2025-12-08 15:10:02,117 [INFO] Argument:325 - Argument : XferCpltCallbackvalue: null
+2025-12-08 15:10:02,117 [INFO] Argument:335 - Argument : XferCpltCallbackvalue: null
+2025-12-08 15:10:02,117 [INFO] Argument:325 - Argument : XferHalfCpltCallbackvalue: null
+2025-12-08 15:10:02,117 [INFO] Argument:335 - Argument : XferHalfCpltCallbackvalue: null
+2025-12-08 15:10:02,117 [INFO] Argument:325 - Argument : XferErrorCallbackvalue: null
+2025-12-08 15:10:02,117 [INFO] Argument:335 - Argument : XferErrorCallbackvalue: null
+2025-12-08 15:10:02,117 [INFO] Argument:325 - Argument : XferAbortCallbackvalue: null
+2025-12-08 15:10:02,117 [INFO] Argument:335 - Argument : XferAbortCallbackvalue: null
+2025-12-08 15:10:02,117 [INFO] Argument:325 - Argument : ErrorCodevalue: null
+2025-12-08 15:10:02,117 [INFO] Argument:335 - Argument : ErrorCodevalue: null
+2025-12-08 15:10:02,117 [INFO] Argument:325 - Argument : ChannelIndexvalue: null
+2025-12-08 15:10:02,118 [INFO] Argument:335 - Argument : ChannelIndexvalue: null
+2025-12-08 15:10:02,118 [INFO] Argument:325 - Argument : DMAmuxChannelvalue: null
+2025-12-08 15:10:02,118 [INFO] Argument:335 - Argument : DMAmuxChannelvalue: null
+2025-12-08 15:10:02,118 [INFO] Argument:325 - Argument : DMAmuxChannelStatusvalue: null
+2025-12-08 15:10:02,119 [INFO] Argument:335 - Argument : DMAmuxChannelStatusvalue: null
+2025-12-08 15:10:02,119 [INFO] Argument:325 - Argument : DMAmuxChannelStatusMaskvalue: null
+2025-12-08 15:10:02,119 [INFO] Argument:335 - Argument : DMAmuxChannelStatusMaskvalue: null
+2025-12-08 15:10:02,119 [INFO] Argument:325 - Argument : DMAmuxRequestGenvalue: null
+2025-12-08 15:10:02,119 [INFO] Argument:335 - Argument : DMAmuxRequestGenvalue: null
+2025-12-08 15:10:02,119 [INFO] Argument:325 - Argument : DMAmuxRequestGenStatusvalue: null
+2025-12-08 15:10:02,119 [INFO] Argument:335 - Argument : DMAmuxRequestGenStatusvalue: null
+2025-12-08 15:10:02,119 [INFO] Argument:325 - Argument : DMAmuxRequestGenStatusMaskvalue: null
+2025-12-08 15:10:02,119 [INFO] Argument:335 - Argument : DMAmuxRequestGenStatusMaskvalue: null
+2025-12-08 15:10:02,390 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\reserach_dc\reserach_dc\MXTmpFiles\license.tmp_save
+2025-12-08 15:10:02,718 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\reserach_dc\reserach_dc\MXTmpFiles\license.tmp
+2025-12-08 15:10:02,838 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\reserach_dc\reserach_dc\MXTmpFiles\gpio.tmp_save
+2025-12-08 15:10:03,025 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\reserach_dc\reserach_dc\MXTmpFiles\gpio.tmp
+2025-12-08 15:10:04,180 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\reserach_dc\reserach_dc\MXTmpFiles\dma.tmp_save
+2025-12-08 15:10:04,324 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\reserach_dc\reserach_dc\MXTmpFiles\dma.tmp
+2025-12-08 15:10:04,334 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\reserach_dc\reserach_dc\MXTmpFiles\dma_GV.tmp_save
+2025-12-08 15:10:04,493 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\reserach_dc\reserach_dc\MXTmpFiles\dma_GV.tmp
+2025-12-08 15:10:04,525 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\reserach_dc\reserach_dc\Core\Src\stm32g4xx_it.c_save
+2025-12-08 15:10:04,845 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\reserach_dc\reserach_dc\Core\Src\stm32g4xx_it.c
+2025-12-08 15:10:04,857 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\reserach_dc\reserach_dc\Core\Inc\stm32g4xx_it.h_save
+2025-12-08 15:10:04,948 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\reserach_dc\reserach_dc\Core\Inc\stm32g4xx_it.h
+2025-12-08 15:10:04,977 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\reserach_dc\reserach_dc\Core\Src\stm32g4xx_hal_msp.c_save
+2025-12-08 15:10:05,153 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\reserach_dc\reserach_dc\Core\Src\stm32g4xx_hal_msp.c
+2025-12-08 15:10:05,160 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\reserach_dc\reserach_dc\MXTmpFiles\system.tmp_save
+2025-12-08 15:10:05,240 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\reserach_dc\reserach_dc\MXTmpFiles\system.tmp
+2025-12-08 15:10:05,261 [INFO] CodeEngine:321 - oldGeneratedFile, C:\Users\Александра\Documents\reserach_dc\reserach_dc\Core\Inc\stm32g4xx_hal_conf.h_save
+2025-12-08 15:10:05,352 [INFO] CodeEngine:345 - Generated code: C:\Users\Александра\Documents\reserach_dc\reserach_dc\Core\Inc\stm32g4xx_hal_conf.h
+2025-12-08 15:10:05,386 [WARN] IPConfigManager:3238 - Warning: the RefConfig RCC_CommonPeriphClockConfig is not available in your config.xml file
+2025-12-08 15:10:05,390 [WARN] IPConfigManager:3811 - IP not found : TIM
+2025-12-08 15:10:05,391 [WARN] CodeGenerator:4259 - IP not found : null
+2025-12-08 15:10:05,404 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\reserach_dc\reserach_dc\Core\Inc\main.h_save
+2025-12-08 15:10:05,574 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\reserach_dc\reserach_dc\Core\Inc\main.h
+2025-12-08 15:10:05,584 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\reserach_dc\reserach_dc\Core\Src\main.c_save
+2025-12-08 15:10:05,762 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\reserach_dc\reserach_dc\Core\Src\main.c
+2025-12-08 15:10:06,565 [INFO] ProjectBuilder:3606 - Time for Copy HAL[1] : 362mS.
+2025-12-08 15:10:06,570 [INFO] ProjectBuilder:5216 - Project Generator version: 4.7.0-B52
+2025-12-08 15:10:06,732 [INFO] ConfigFileManager:1595 - The Die is : DIE469
+2025-12-08 15:10:08,121 [INFO] ProjectBuilder:5496 - Time for Generating toolchain IDE Files: 1551mS.
+2025-12-08 15:10:08,122 [INFO] ProjectBuilder:3463 - Time for Copy CMSIS : 1mS.
+2025-12-08 15:10:08,127 [INFO] ProjectBuilder:3463 - Time for Copy CMSIS : 1mS.
+2025-12-08 15:11:20,856 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2025-12-08 15:11:20,942 [INFO] ADCParametersView:116 -                Rank 1 : true
+2025-12-08 15:11:20,946 [INFO] ADCParametersView:116 -                Rank 1 : true
+2025-12-08 15:11:20,947 [INFO] ADCParametersView:116 -                Rank 1 : true
+2025-12-08 15:11:20,948 [INFO] ADCParametersView:116 -                Rank 1 : true
+2025-12-08 15:11:20,948 [INFO] ADCParametersView:116 -                Rank 1 : true
+2025-12-08 15:11:20,949 [INFO] ADCParametersView:116 -                Rank 1 : true
+2025-12-08 15:11:20,949 [INFO] ADCParametersView:116 -                Rank 1 : true
+2025-12-08 15:11:20,949 [INFO] ADCParametersView:116 -                Rank 1 : true
+2025-12-08 15:11:20,950 [INFO] ADCParametersView:116 -                Rank 1 : true
+2025-12-08 15:11:20,950 [INFO] ADCParametersView:116 -                Rank 1 : true
+2025-12-08 15:11:20,950 [INFO] ADCParametersView:116 -                Rank 1 : true
+2025-12-08 15:11:20,950 [INFO] ADCParametersView:116 -                Rank 1 : true
+2025-12-08 15:11:20,951 [INFO] ADCParametersView:116 -                Rank 1 : true
+2025-12-08 15:11:20,951 [INFO] ADCParametersView:116 -                Rank 1 : true
+2025-12-08 15:11:20,951 [INFO] ADCParametersView:116 -                Rank 1 : true
+2025-12-08 15:11:20,951 [INFO] ADCParametersView:116 -                Rank 1 : true
+2025-12-08 15:11:20,952 [INFO] ADCParametersView:116 -                Rank 1 : true
+2025-12-08 15:11:20,952 [INFO] ADCParametersView:116 -                Rank 1 : true
+2025-12-08 15:11:20,952 [INFO] ADCParametersView:116 -                Rank 1 : true
+2025-12-08 15:11:20,952 [INFO] ADCParametersView:116 -                Rank 1 : true
+2025-12-08 15:11:20,952 [INFO] ADCParametersView:116 -                Rank 1 : true
+2025-12-08 15:11:20,981 [INFO] ADCParametersView:116 -                Rank 1 : true
+2025-12-08 15:11:36,817 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 460014360 Bytes (827326464)
+2025-12-08 15:11:38,107 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 357776152 Bytes (827326464)
+2025-12-08 15:11:40,027 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 473645848 Bytes (827326464)
+2025-12-08 15:11:40,341 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: SPI
+2025-12-08 15:11:40,341 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: TIM1_8G4
+2025-12-08 15:11:40,341 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: SYS
+2025-12-08 15:11:40,341 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: ADC
+2025-12-08 15:11:40,341 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: RCC
+2025-12-08 15:11:40,341 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: NVIC
+2025-12-08 15:11:40,341 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: USART
+2025-12-08 15:11:40,341 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: DMA
+2025-12-08 15:11:40,342 [INFO] BlockDiagram:2775 - set Specific Code input for plugin: GPIO
+2025-12-08 15:11:40,343 [INFO] CodeGenerator:892 - code generatio: config db path: C:/Users/Александра/.stm32cubemx/databases/DB.6.0.120/db/
+2025-12-08 15:11:40,351 [INFO] Argument:325 - Argument : hdmavalue: null
+2025-12-08 15:11:40,352 [INFO] Argument:327 - 	 sub Args: 
+2025-12-08 15:11:40,352 [INFO] Argument:325 - Argument : Instancevalue: DMA1_Channel1
+2025-12-08 15:11:40,352 [INFO] Argument:335 - Argument : Instancevalue: DMA1_Channel1
+2025-12-08 15:11:40,352 [INFO] Argument:325 - Argument : Initvalue: null
+2025-12-08 15:11:40,352 [INFO] Argument:327 - 	 sub Args: 
+2025-12-08 15:11:40,352 [INFO] Argument:325 - Argument : Requestvalue: DMA_REQUEST_ADC1
+2025-12-08 15:11:40,352 [INFO] Argument:335 - Argument : Requestvalue: DMA_REQUEST_ADC1
+2025-12-08 15:11:40,352 [INFO] Argument:325 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2025-12-08 15:11:40,352 [INFO] Argument:335 - Argument : Directionvalue: DMA_PERIPH_TO_MEMORY
+2025-12-08 15:11:40,352 [INFO] Argument:325 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2025-12-08 15:11:40,352 [INFO] Argument:335 - Argument : PeriphIncvalue: DMA_PINC_DISABLE
+2025-12-08 15:11:40,352 [INFO] Argument:325 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2025-12-08 15:11:40,353 [INFO] Argument:335 - Argument : MemIncvalue: DMA_MINC_ENABLE
+2025-12-08 15:11:40,353 [INFO] Argument:325 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2025-12-08 15:11:40,353 [INFO] Argument:335 - Argument : PeriphDataAlignmentvalue: DMA_PDATAALIGN_HALFWORD
+2025-12-08 15:11:40,353 [INFO] Argument:325 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2025-12-08 15:11:40,353 [INFO] Argument:335 - Argument : MemDataAlignmentvalue: DMA_MDATAALIGN_HALFWORD
+2025-12-08 15:11:40,353 [INFO] Argument:325 - Argument : Modevalue: DMA_CIRCULAR
+2025-12-08 15:11:40,353 [INFO] Argument:335 - Argument : Modevalue: DMA_CIRCULAR
+2025-12-08 15:11:40,353 [INFO] Argument:325 - Argument : Priorityvalue: DMA_PRIORITY_LOW
+2025-12-08 15:11:40,353 [INFO] Argument:335 - Argument : Priorityvalue: DMA_PRIORITY_LOW
+2025-12-08 15:11:40,353 [INFO] Argument:325 - Argument : Lockvalue: null
+2025-12-08 15:11:40,353 [INFO] Argument:335 - Argument : Lockvalue: null
+2025-12-08 15:11:40,353 [INFO] Argument:325 - Argument : Statevalue: null
+2025-12-08 15:11:40,353 [INFO] Argument:335 - Argument : Statevalue: null
+2025-12-08 15:11:40,353 [INFO] Argument:325 - Argument : Parentvalue: null
+2025-12-08 15:11:40,353 [INFO] Argument:335 - Argument : Parentvalue: null
+2025-12-08 15:11:40,353 [INFO] Argument:325 - Argument : XferCpltCallbackvalue: null
+2025-12-08 15:11:40,354 [INFO] Argument:335 - Argument : XferCpltCallbackvalue: null
+2025-12-08 15:11:40,354 [INFO] Argument:325 - Argument : XferHalfCpltCallbackvalue: null
+2025-12-08 15:11:40,354 [INFO] Argument:335 - Argument : XferHalfCpltCallbackvalue: null
+2025-12-08 15:11:40,354 [INFO] Argument:325 - Argument : XferErrorCallbackvalue: null
+2025-12-08 15:11:40,354 [INFO] Argument:335 - Argument : XferErrorCallbackvalue: null
+2025-12-08 15:11:40,354 [INFO] Argument:325 - Argument : XferAbortCallbackvalue: null
+2025-12-08 15:11:40,354 [INFO] Argument:335 - Argument : XferAbortCallbackvalue: null
+2025-12-08 15:11:40,354 [INFO] Argument:325 - Argument : ErrorCodevalue: null
+2025-12-08 15:11:40,354 [INFO] Argument:335 - Argument : ErrorCodevalue: null
+2025-12-08 15:11:40,354 [INFO] Argument:325 - Argument : ChannelIndexvalue: null
+2025-12-08 15:11:40,354 [INFO] Argument:335 - Argument : ChannelIndexvalue: null
+2025-12-08 15:11:40,354 [INFO] Argument:325 - Argument : DMAmuxChannelvalue: null
+2025-12-08 15:11:40,354 [INFO] Argument:335 - Argument : DMAmuxChannelvalue: null
+2025-12-08 15:11:40,355 [INFO] Argument:325 - Argument : DMAmuxChannelStatusvalue: null
+2025-12-08 15:11:40,355 [INFO] Argument:335 - Argument : DMAmuxChannelStatusvalue: null
+2025-12-08 15:11:40,355 [INFO] Argument:325 - Argument : DMAmuxChannelStatusMaskvalue: null
+2025-12-08 15:11:40,355 [INFO] Argument:335 - Argument : DMAmuxChannelStatusMaskvalue: null
+2025-12-08 15:11:40,355 [INFO] Argument:325 - Argument : DMAmuxRequestGenvalue: null
+2025-12-08 15:11:40,355 [INFO] Argument:335 - Argument : DMAmuxRequestGenvalue: null
+2025-12-08 15:11:40,355 [INFO] Argument:325 - Argument : DMAmuxRequestGenStatusvalue: null
+2025-12-08 15:11:40,355 [INFO] Argument:335 - Argument : DMAmuxRequestGenStatusvalue: null
+2025-12-08 15:11:40,355 [INFO] Argument:325 - Argument : DMAmuxRequestGenStatusMaskvalue: null
+2025-12-08 15:11:40,355 [INFO] Argument:335 - Argument : DMAmuxRequestGenStatusMaskvalue: null
+2025-12-08 15:11:40,483 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\reserach_dc\reserach_dc\MXTmpFiles\license.tmp_save
+2025-12-08 15:11:40,555 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\reserach_dc\reserach_dc\MXTmpFiles\license.tmp
+2025-12-08 15:11:40,620 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\reserach_dc\reserach_dc\MXTmpFiles\gpio.tmp_save
+2025-12-08 15:11:40,689 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\reserach_dc\reserach_dc\MXTmpFiles\gpio.tmp
+2025-12-08 15:11:41,135 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\reserach_dc\reserach_dc\MXTmpFiles\dma.tmp_save
+2025-12-08 15:11:41,203 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\reserach_dc\reserach_dc\MXTmpFiles\dma.tmp
+2025-12-08 15:11:41,209 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\reserach_dc\reserach_dc\MXTmpFiles\dma_GV.tmp_save
+2025-12-08 15:11:41,275 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\reserach_dc\reserach_dc\MXTmpFiles\dma_GV.tmp
+2025-12-08 15:11:41,297 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\reserach_dc\reserach_dc\Core\Src\stm32g4xx_it.c_save
+2025-12-08 15:11:41,374 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\reserach_dc\reserach_dc\Core\Src\stm32g4xx_it.c
+2025-12-08 15:11:41,383 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\reserach_dc\reserach_dc\Core\Inc\stm32g4xx_it.h_save
+2025-12-08 15:11:41,447 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\reserach_dc\reserach_dc\Core\Inc\stm32g4xx_it.h
+2025-12-08 15:11:41,466 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\reserach_dc\reserach_dc\Core\Src\stm32g4xx_hal_msp.c_save
+2025-12-08 15:11:41,589 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\reserach_dc\reserach_dc\Core\Src\stm32g4xx_hal_msp.c
+2025-12-08 15:11:41,596 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\reserach_dc\reserach_dc\MXTmpFiles\system.tmp_save
+2025-12-08 15:11:41,662 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\reserach_dc\reserach_dc\MXTmpFiles\system.tmp
+2025-12-08 15:11:41,682 [INFO] CodeEngine:321 - oldGeneratedFile, C:\Users\Александра\Documents\reserach_dc\reserach_dc\Core\Inc\stm32g4xx_hal_conf.h_save
+2025-12-08 15:11:41,759 [INFO] CodeEngine:345 - Generated code: C:\Users\Александра\Documents\reserach_dc\reserach_dc\Core\Inc\stm32g4xx_hal_conf.h
+2025-12-08 15:11:41,776 [WARN] IPConfigManager:3238 - Warning: the RefConfig RCC_CommonPeriphClockConfig is not available in your config.xml file
+2025-12-08 15:11:41,779 [WARN] IPConfigManager:3811 - IP not found : TIM
+2025-12-08 15:11:41,780 [WARN] CodeGenerator:4259 - IP not found : null
+2025-12-08 15:11:41,789 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\reserach_dc\reserach_dc\Core\Inc\main.h_save
+2025-12-08 15:11:41,862 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\reserach_dc\reserach_dc\Core\Inc\main.h
+2025-12-08 15:11:41,869 [INFO] CodeEngine:265 - oldGeneratedFile, C:\Users\Александра\Documents\reserach_dc\reserach_dc\Core\Src\main.c_save
+2025-12-08 15:11:42,005 [INFO] CodeEngine:289 - Generated code: C:\Users\Александра\Documents\reserach_dc\reserach_dc\Core\Src\main.c
+2025-12-08 15:11:42,441 [INFO] ProjectBuilder:3606 - Time for Copy HAL[1] : 206mS.
+2025-12-08 15:11:42,445 [INFO] ProjectBuilder:5216 - Project Generator version: 4.7.0-B52
+2025-12-08 15:11:42,562 [INFO] ConfigFileManager:1595 - The Die is : DIE469
+2025-12-08 15:11:43,728 [INFO] ProjectBuilder:5496 - Time for Generating toolchain IDE Files: 1282mS.
+2025-12-08 15:11:43,729 [INFO] ProjectBuilder:3463 - Time for Copy CMSIS : 1mS.
+2025-12-08 15:11:43,738 [INFO] ProjectBuilder:3463 - Time for Copy CMSIS : 0mS.
+2025-12-08 16:22:45,538 [ERROR] ConfigurationRetriever:142 - IOException on connection: Read timed out

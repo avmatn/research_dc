@@ -64,7 +64,7 @@ float Vzero = 2.5f;
 float Vadc_zero;
 float Vadc;
 float I;
-float offset;
+float offset = 0;
 
 //Флаги
 uint8_t  tick;
@@ -211,13 +211,13 @@ float ADC_autocalibrate(void)
     //uint32_t oldTrigEdge = hadc1.Init.ExternalTrigConvEdge;
 
     // --- временно софтовый запуск ---
-    //hadc1.Init.ExternalTrigConv     = ADC_SOFTWARE_START;
-    //hadc1.Init.ExternalTrigConvEdge = ADC_EXTERNALTRIGCONVEDGE_NONE;
-    //if (HAL_ADC_Init(&hadc1) != HAL_OK) {
-       // adc_fault_init_calibr = 1;
+    hadc1.Init.ExternalTrigConv     = ADC_SOFTWARE_START;
+    hadc1.Init.ExternalTrigConvEdge = ADC_EXTERNALTRIGCONVEDGE_NONE;
+    if (HAL_ADC_Init(&hadc1) != HAL_OK) {
+        adc_fault_init_calibr = 1;
 
-        //return 0.0f;
-    //}
+        return 0.0f;
+    }
 
 	uint32_t adc_value_calibr = 0;
 	int i;
@@ -242,9 +242,9 @@ float ADC_autocalibrate(void)
 	  // --- вернуть старые настройки (TIM3 TRGO) ---
 	 // hadc1.Init.ExternalTrigConv     = oldTrig;
 	  //hadc1.Init.ExternalTrigConvEdge = oldTrigEdge;
-	  //if (HAL_ADC_Init(&hadc1) != HAL_OK) {
-	    // reinit = 1;
-	    //}
+	  if (HAL_ADC_Init(&hadc1) != HAL_OK) {
+	     reinit = 1;
+	    }
 	  return Vadc_zero;
 
 }
@@ -292,9 +292,9 @@ int main(void)
   MX_SPI1_Init();
   /* USER CODE BEGIN 2 */
 
-  Vadc_zero = ADC_autocalibrate();
+  //Vadc_zero = ADC_autocalibrate();
   HAL_ADCEx_Calibration_Start(&hadc1, ADC_SINGLE_ENDED);
-  //HAL_ADC_Start_DMA(&hadc1, (uint32_t*)adcbuf, adc_arr_n);
+  HAL_ADC_Start_DMA(&hadc1, (uint32_t*)adcbuf, adc_arr_n);
   HAL_TIM_Base_Start_IT(&htim3);
   HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_1);
 
@@ -324,13 +324,9 @@ int main(void)
 		  angle_deg = (raw * 360.0f) / 16384.0f;
 
 		  //------------------------current----------------------------
-		  if (HAL_ADC_Start(&hadc1) == HAL_OK)
-		  {
-		      HAL_ADC_PollForConversion(&hadc1, 10);
-		      adcbuf[0] = HAL_ADC_GetValue(&hadc1);
-		  }
 		  Vadc = (adcbuf[0] / adcdiskr) * Vref;
-		  I = (Vadc - Vadc_zero) / sens_cur;
+		  Vadc_zero = Vadc;
+	      I = (Vadc - Vadc_zero + offset) / sens_cur;
 		  er_i = i_ref - I;
 		  Int_e_i += Ki_i * er_i;
 		  Int_e_i = saturation(Int_e_i, 0.95f);

@@ -294,7 +294,7 @@ int main(void)
 
   Vadc_zero = ADC_autocalibrate();
   HAL_ADCEx_Calibration_Start(&hadc1, ADC_SINGLE_ENDED);
-  //HAL_ADC_Start_DMA(&hadc1, (uint32_t*)adcbuf, adc_arr_n);
+  HAL_ADC_Start_DMA(&hadc1, (uint32_t*)adcbuf, adc_arr_n);
   HAL_TIM_Base_Start_IT(&htim3);
   HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_1);
 
@@ -324,11 +324,6 @@ int main(void)
 		  angle_deg = (raw * 360.0f) / 16384.0f;
 
 		  //------------------------current----------------------------
-		  if (HAL_ADC_Start(&hadc1) == HAL_OK)
-		  {
-		      HAL_ADC_PollForConversion(&hadc1, 10);
-		      adcbuf[0] = HAL_ADC_GetValue(&hadc1);
-		  }
 		  Vadc = (adcbuf[0] / adcdiskr) * Vref;
 		  I = (Vadc - Vadc_zero) / sens_cur;
 		  er_i = i_ref - I;

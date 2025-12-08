@@ -1,4 +1,4 @@
-15:10:08 **** Incremental Build of configuration Debug for project reserach_dc ****
+18:43:52 **** Incremental Build of configuration Debug for project reserach_dc ****
 make -j8 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G474xx -c -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -u_printf_float -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
 ../Core/Src/main.c: In function 'main':
@@ -11,19 +11,19 @@ Finished building target: reserach_dc.elf
 arm-none-eabi-size  reserach_dc.elf 
 arm-none-eabi-objdump -h -S reserach_dc.elf  > "reserach_dc.list"
    text	   data	    bss	    dec	    hex	filename
-  45356	    496	   2520	  48372	   bcf4	reserach_dc.elf
+  44124	    496	   2512	  47132	   b81c	reserach_dc.elf
 Finished building: default.size.stdout
  
 Finished building: reserach_dc.list
  
-15:10:34 **** Incremental Build of configuration Debug for project reserach_dc ****
+18:43:56 **** Incremental Build of configuration Debug for project reserach_dc ****
 make -j8 all 
 arm-none-eabi-size  reserach_dc.elf 
    text	   data	    bss	    dec	    hex	filename
-  45356	    496	   2520	  48372	   bcf4	reserach_dc.elf
+  44124	    496	   2512	  47132	   b81c	reserach_dc.elf
 Finished building: default.size.stdout
  
-15:11:46 **** Incremental Build of configuration Debug for project reserach_dc ****
+19:30:06 **** Incremental Build of configuration Debug for project reserach_dc ****
 make -j8 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G474xx -c -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -u_printf_float -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
 ../Core/Src/main.c: In function 'main':
@@ -36,8 +36,22 @@ Finished building target: reserach_dc.elf
 arm-none-eabi-size  reserach_dc.elf 
 arm-none-eabi-objdump -h -S reserach_dc.elf  > "reserach_dc.list"
    text	   data	    bss	    dec	    hex	filename
-  45356	    496	   2520	  48372	   bcf4	reserach_dc.elf
+  44124	    496	   2512	  47132	   b81c	reserach_dc.elf
 Finished building: default.size.stdout
  
 Finished building: reserach_dc.list
+ 
+19:30:22 **** Incremental Build of configuration Debug for project reserach_dc ****
+make -j8 all 
+arm-none-eabi-size  reserach_dc.elf 
+   text	   data	    bss	    dec	    hex	filename
+  44124	    496	   2512	  47132	   b81c	reserach_dc.elf
+Finished building: default.size.stdout
+ 
+19:31:45 **** Incremental Build of configuration Debug for project reserach_dc ****
+make -j8 all 
+arm-none-eabi-size  reserach_dc.elf 
+   text	   data	    bss	    dec	    hex	filename
+  44124	    496	   2512	  47132	   b81c	reserach_dc.elf
+Finished building: default.size.stdout
  
