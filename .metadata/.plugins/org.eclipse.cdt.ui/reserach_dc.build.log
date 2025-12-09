@@ -1,10 +1,10 @@
-19:31:45 **** Incremental Build of configuration Debug for project reserach_dc ****
+14:55:31 **** Incremental Build of configuration Debug for project reserach_dc ****
 make -j8 all 
 arm-none-eabi-size  reserach_dc.elf 
    text	   data	    bss	    dec	    hex	filename
-  44124	    496	   2512	  47132	   b81c	reserach_dc.elf
+  45460	    496	   2520	  48476	   bd5c	reserach_dc.elf
 Finished building: default.size.stdout
  
 
-19:31:46 Build Finished. 0 errors, 0 warnings. (took 396ms)
+14:55:31 Build Finished. 0 errors, 0 warnings. (took 438ms)
 

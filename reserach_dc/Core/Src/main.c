@@ -36,6 +36,7 @@
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
 #define adc_arr_n 1
+#define adc_count_n 10
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -57,6 +58,7 @@ UART_HandleTypeDef huart2;
 
 //Чтение АЦП
 uint16_t adcbuf[adc_arr_n]; // здесь массив значений ацп
+uint16_t adc_accum = 0;
 float Vref = 3.3f;
 float adcdiskr = 4095.0f;
 float sens_cur = 0.185f; //ACS712 5A
@@ -65,6 +67,9 @@ float Vadc_zero;
 float Vadc;
 float I;
 float offset;
+
+//Счётчики
+uint16_t adc_count = 0;
 
 //Флаги
 uint8_t  tick;
@@ -207,17 +212,17 @@ return x;
 float ADC_autocalibrate(void)
 {
     // --- сохранить старые настройки ---
-    //uint32_t oldTrig    = hadc1.Init.ExternalTrigConv;
-    //uint32_t oldTrigEdge = hadc1.Init.ExternalTrigConvEdge;
+    uint32_t oldTrig    = hadc1.Init.ExternalTrigConv;
+    uint32_t oldTrigEdge = hadc1.Init.ExternalTrigConvEdge;
 
     // --- временно софтовый запуск ---
-    //hadc1.Init.ExternalTrigConv     = ADC_SOFTWARE_START;
-    //hadc1.Init.ExternalTrigConvEdge = ADC_EXTERNALTRIGCONVEDGE_NONE;
-    //if (HAL_ADC_Init(&hadc1) != HAL_OK) {
-       // adc_fault_init_calibr = 1;
+    hadc1.Init.ExternalTrigConv     = ADC_SOFTWARE_START;
+    hadc1.Init.ExternalTrigConvEdge = ADC_EXTERNALTRIGCONVEDGE_NONE;
+    if (HAL_ADC_Init(&hadc1) != HAL_OK) {
+       adc_fault_init_calibr = 1;
 
-        //return 0.0f;
-    //}
+        return 0.0f;
+    }
 
 	uint32_t adc_value_calibr = 0;
 	int i;
@@ -240,11 +245,11 @@ float ADC_autocalibrate(void)
 	  calibration_done = 1;
 
 	  // --- вернуть старые настройки (TIM3 TRGO) ---
-	 // hadc1.Init.ExternalTrigConv     = oldTrig;
-	  //hadc1.Init.ExternalTrigConvEdge = oldTrigEdge;
-	  //if (HAL_ADC_Init(&hadc1) != HAL_OK) {
-	    // reinit = 1;
-	    //}
+	 hadc1.Init.ExternalTrigConv     = oldTrig;
+	 hadc1.Init.ExternalTrigConvEdge = oldTrigEdge;
+	  if (HAL_ADC_Init(&hadc1) != HAL_OK) {
+	    reinit = 1;
+	    }
 	  return Vadc_zero;
 
 }
@@ -294,7 +299,7 @@ int main(void)
 
   Vadc_zero = ADC_autocalibrate();
   HAL_ADCEx_Calibration_Start(&hadc1, ADC_SINGLE_ENDED);
-  //HAL_ADC_Start_DMA(&hadc1, (uint32_t*)adcbuf, adc_arr_n);
+  HAL_ADC_Start_DMA(&hadc1, (uint32_t*)adcbuf, adc_arr_n);
   HAL_TIM_Base_Start_IT(&htim3);
   HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_1);
 
@@ -308,7 +313,22 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	  static uint16_t uart_div = 0; // uart в цикле не юзать
+	  if (buffer_complete) {
+	 			buffer_complete = 0;
+	 			adc_count++;
+	 			adc_accum += adcbuf[0];
+
+	 			if (adc_count >= adc_count_n){
+	 				uint16_t adc_average = (uint16_t)(adc_accum / adc_count_n);
+
+	 				adc_count = 0;
+	 				adc_accum = 0;
+
+	 				Vadc = (adc_average / adcdiskr) * Vref;
+	 				 I = (Vadc - Vadc_zero) / sens_cur;
+	 			}
+	  }
+//static uint16_t uart_div = 0; // uart в цикле не юзать
 // apb1 = 120 кГц; arr = 999; prescaler = 11 -> 10кГц
 	  if(tick) {
 		  tick = 0;
@@ -324,16 +344,9 @@ int main(void)
 		  angle_deg = (raw * 360.0f) / 16384.0f;
 
 		  //------------------------current----------------------------
-		  if (HAL_ADC_Start(&hadc1) == HAL_OK)
-		  {
-		      HAL_ADC_PollForConversion(&hadc1, 10);
-		      adcbuf[0] = HAL_ADC_GetValue(&hadc1);
-		  }
-		  Vadc = (adcbuf[0] / adcdiskr) * Vref;
-		  I = (Vadc - Vadc_zero) / sens_cur;
-		  er_i = i_ref - I;
+	   	  er_i = i_ref - I;
 		  Int_e_i += Ki_i * er_i;
-		  Int_e_i = saturation(Int_e_i, 0.95f);
+   		  Int_e_i = saturation(Int_e_i, 0.95f);
 		  u_i = Kp_i * er_i + Int_e_i;
 		  u_i = saturation(u_i, 0.95f);
 		  uint32_t arr = __HAL_TIM_GET_AUTORELOAD(&htim3);
@@ -341,8 +354,9 @@ int main(void)
 
 		  uint32_t pulse = (uint32_t)(fabsf(u_i) * (arr + 1));
 		  __HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_1, pulse);
+		  }
 		  //-----------------------------------------------------
-	  }
+
 	  //---------------ПИ -регулятор и чтение скорости на частоте-------------------
 	  if (tick_counter >= 20) {
 		  tick_counter = 0;
@@ -461,8 +475,8 @@ static void MX_ADC1_Init(void)
   hadc1.Init.ContinuousConvMode = DISABLE;
   hadc1.Init.NbrOfConversion = 1;
   hadc1.Init.DiscontinuousConvMode = DISABLE;
-  hadc1.Init.ExternalTrigConv = ADC_SOFTWARE_START;
-  hadc1.Init.ExternalTrigConvEdge = ADC_EXTERNALTRIGCONVEDGE_NONE;
+  hadc1.Init.ExternalTrigConv = ADC_EXTERNALTRIG_T3_TRGO;
+  hadc1.Init.ExternalTrigConvEdge = ADC_EXTERNALTRIGCONVEDGE_RISING;
   hadc1.Init.DMAContinuousRequests = ENABLE;
   hadc1.Init.Overrun = ADC_OVR_DATA_PRESERVED;
   hadc1.Init.OversamplingMode = DISABLE;
