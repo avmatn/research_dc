@@ -137,8 +137,8 @@ uint8_t reinit = 0;
 typedef struct {
     float prev_input;    //предыдущее входное
     float prev_output;   //предыдущее выходное
-    float alpha;         //(2*T_f - T_d)/(2*T_f + T_d)
-    float beta;          //T_d/(2*T_f + T_d)
+    float alpha;         //(2*T_F - T_D)/(2*T_F + T_D)
+    float beta;          //T_D/(2*T_F + T_D)
 } LowPassFilter_t; //название коробки этой
 
 // Фильтр для тока
@@ -373,7 +373,7 @@ int main(void)
 	 				Vadc = (adc_average / adcdiskr) * Vref;
 	 				float I_raw = (Vadc - Vadc_zero) / sens_cur;
 
-	 				// фильтруем
+	 				// ПРИМЕНЯЕМ ФИЛЬТР К ТОКУ
 	 				I = Filter_Process(&current_filter, I_raw);
 	 				// I = (Vadc - Vadc_zero) / sens_cur;
 	 			}

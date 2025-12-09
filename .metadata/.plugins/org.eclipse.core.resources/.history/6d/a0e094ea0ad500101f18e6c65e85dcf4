@@ -135,11 +135,11 @@ uint8_t calibration_done = 0;
 uint8_t reinit = 0;
 
 typedef struct {
-    float prev_input;    //предыдущее входное
-    float prev_output;   //предыдущее выходное
-    float alpha;         //(2*T_f - T_d)/(2*T_f + T_d)
-    float beta;          //T_d/(2*T_f + T_d)
-} LowPassFilter_t; //название коробки этой
+    float prev_input;    // U_DC_OLD
+    float prev_output;   // U_DC_F_OLD
+    float alpha;         // (2*T_F - T_D)/(2*T_F + T_D)
+    float beta;          // T_D/(2*T_F + T_D)
+} LowPassFilter_t;
 
 // Фильтр для тока
 LowPassFilter_t current_filter;
@@ -156,7 +156,6 @@ static void MX_USART2_UART_Init(void);
 static void MX_SPI1_Init(void);
 /* USER CODE BEGIN PFP */
 
-//------------------------------------------------------------------------------------------------------------
 //для print по usart, обращаем внимание на выбранный usart
 void uprintf(const char *fmt, ...) {
     char buffer[128]; // временный буфер
@@ -167,14 +166,14 @@ void uprintf(const char *fmt, ...) {
     HAL_UART_Transmit(&huart2, (uint8_t*)buffer, strlen(buffer), HAL_MAX_DELAY);
 }
 
-//---------------функция sign-------------------
+//функция sign
 
 float sign(float x) {
     if (x > 0) return 1.0f;
     if (x < 0) return -1.0f;
     return 0.0f;
 }
-//------функция инициализирует угол. то есть до начала цикла в переменной предыдущего угла кладется значение с энкодера
+//функция инициализирует угол. то есть до начала цикла в переменной предыдущего угла кладется значение с энкодера
  float Prev_angle_Init () {
 
 		command = 0xFFFF;
@@ -193,7 +192,7 @@ float sign(float x) {
 
 	  return (prev_angle_deg);
 }
-//---------------- функция выбора направления двигателя в зависимости от знака управления---------------
+// функция выбора направления двигателя в зависимости от знака управления
 void mode_direction(float u){
 	if (u >= 0.0f){
 		HAL_GPIO_WritePin(GPIOA, DIR1_Pin, GPIO_PIN_RESET); //forward
@@ -211,7 +210,7 @@ void mode_direction_i(float u_i){
 		HAL_GPIO_WritePin(GPIOA, DIR1_Pin, GPIO_PIN_SET); //reverse
 	}
 }
-//-----------------------функция ограничения интеграла и управления-----------------
+// функция ограничения интеграла и управления
 
 float saturation(float x, float y){
 if (fabsf(x) >= y){
@@ -219,7 +218,7 @@ if (fabsf(x) >= y){
 }
 return x;
 }
-//---------------------------------------------------------------------------------
+
 float ADC_autocalibrate(void)
 {
     // --- сохранить старые настройки ---
@@ -264,14 +263,13 @@ float ADC_autocalibrate(void)
 	  return Vadc_zero;
 
 }
-
-//-----------------фильтр низких частот-------------------------------------------
+//фильтр низких частот
 void Filter_Init(LowPassFilter_t* filter, float cutoff_hz, float sample_rate_hz) {
-    // дискретизация T_d
+    // период дискретизации T_d
     float T_d = 1.0f / sample_rate_hz;
 
-    // постоянная времени T_f (стак с частотой среза)
-    // f_cut = 1/(2*pi*T_f)-------------- T_f = 1/(2*pi*f_cut)
+    // постоянная времени T_f из частоты среза
+    // f_cut = 1/(2*pi*T_f) => T_f = 1/(2*pi*f_cut)
     float T_f = 1.0f / (2.0f * 3.1415926535f * cutoff_hz);
 
     // коэфы
@@ -283,19 +281,19 @@ void Filter_Init(LowPassFilter_t* filter, float cutoff_hz, float sample_rate_hz)
     filter->prev_output = 0.0f;
 
 }
-//-------------------------------------------------------------------------------
+
 float Filter_Process(LowPassFilter_t* filter, float input) {
     // y = alpha * y_old + beta * (u_old + u)
     float output = filter->alpha * filter->prev_output +
                    filter->beta * (filter->prev_input + input);
 
-    // сохраняем для следующего шага
+    // Сохраняем для следующего шага
     filter->prev_input = input;
     filter->prev_output = output;
 
     return output;
 }
-//---------------------------------------------------------------------------------
+
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -348,7 +346,6 @@ int main(void)
 
   // ИНИЦИАЛИЗАЦИЯ ФИЛЬТРОВ
    Filter_Init(&current_filter, FILTER_CUTOFF_CURRENT_HZ, SAMPLE_RATE_HZ);
-
 // вызов функция инициализации предыдущего угла
  //prev_angle_deg = Prev_angle_Init(); // кладем в prev_angle_deg угол, переменная != 0
 
@@ -373,7 +370,7 @@ int main(void)
 	 				Vadc = (adc_average / adcdiskr) * Vref;
 	 				float I_raw = (Vadc - Vadc_zero) / sens_cur;
 
-	 				// фильтруем
+	 				// ПРИМЕНЯЕМ ФИЛЬТР К ТОКУ
 	 				I = Filter_Process(&current_filter, I_raw);
 	 				// I = (Vadc - Vadc_zero) / sens_cur;
 	 			}

@@ -373,7 +373,7 @@ int main(void)
 	 				Vadc = (adc_average / adcdiskr) * Vref;
 	 				float I_raw = (Vadc - Vadc_zero) / sens_cur;
 
-	 				// фильтруем
+	 				// ПРИМЕНЯЕМ ФИЛЬТР К ТОКУ
 	 				I = Filter_Process(&current_filter, I_raw);
 	 				// I = (Vadc - Vadc_zero) / sens_cur;
 	 			}

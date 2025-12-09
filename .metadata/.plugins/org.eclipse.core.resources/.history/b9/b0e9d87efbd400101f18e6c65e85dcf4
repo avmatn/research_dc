@@ -36,10 +36,8 @@
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
 #define adc_arr_n 1
-#define adc_count_n 15
-
-#define FILTER_CUTOFF_CURRENT_HZ   50.0f    // Частота среза для тока, Гц
-#define SAMPLE_RATE_HZ             10000.0f // Частота дискретизации
+#define adc_count_n 10
+/* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
 /* USER CODE BEGIN PM */
@@ -134,15 +132,7 @@ uint8_t calibration_poll_timeout = 0;
 uint8_t calibration_done = 0;
 uint8_t reinit = 0;
 
-typedef struct {
-    float prev_input;    //предыдущее входное
-    float prev_output;   //предыдущее выходное
-    float alpha;         //(2*T_f - T_d)/(2*T_f + T_d)
-    float beta;          //T_d/(2*T_f + T_d)
-} LowPassFilter_t; //название коробки этой
 
-// Фильтр для тока
-LowPassFilter_t current_filter;
 
 /* USER CODE END PV */
 
@@ -156,7 +146,6 @@ static void MX_USART2_UART_Init(void);
 static void MX_SPI1_Init(void);
 /* USER CODE BEGIN PFP */
 
-//------------------------------------------------------------------------------------------------------------
 //для print по usart, обращаем внимание на выбранный usart
 void uprintf(const char *fmt, ...) {
     char buffer[128]; // временный буфер
@@ -167,14 +156,14 @@ void uprintf(const char *fmt, ...) {
     HAL_UART_Transmit(&huart2, (uint8_t*)buffer, strlen(buffer), HAL_MAX_DELAY);
 }
 
-//---------------функция sign-------------------
+//функция sign
 
 float sign(float x) {
     if (x > 0) return 1.0f;
     if (x < 0) return -1.0f;
     return 0.0f;
 }
-//------функция инициализирует угол. то есть до начала цикла в переменной предыдущего угла кладется значение с энкодера
+//функция инициализирует угол. то есть до начала цикла в переменной предыдущего угла кладется значение с энкодера
  float Prev_angle_Init () {
 
 		command = 0xFFFF;
@@ -193,7 +182,7 @@ float sign(float x) {
 
 	  return (prev_angle_deg);
 }
-//---------------- функция выбора направления двигателя в зависимости от знака управления---------------
+// функция выбора направления двигателя в зависимости от знака управления
 void mode_direction(float u){
 	if (u >= 0.0f){
 		HAL_GPIO_WritePin(GPIOA, DIR1_Pin, GPIO_PIN_RESET); //forward
@@ -211,7 +200,7 @@ void mode_direction_i(float u_i){
 		HAL_GPIO_WritePin(GPIOA, DIR1_Pin, GPIO_PIN_SET); //reverse
 	}
 }
-//-----------------------функция ограничения интеграла и управления-----------------
+// функция ограничения интеграла и управления
 
 float saturation(float x, float y){
 if (fabsf(x) >= y){
@@ -219,7 +208,7 @@ if (fabsf(x) >= y){
 }
 return x;
 }
-//---------------------------------------------------------------------------------
+
 float ADC_autocalibrate(void)
 {
     // --- сохранить старые настройки ---
@@ -251,7 +240,7 @@ float ADC_autocalibrate(void)
 	    adc_value_calibr += HAL_ADC_GetValue(&hadc1);
 
 	  }
-	  float adc_zero_value = (float)adc_value_calibr / 10.0f;
+	  float adc_zero_value = (float)adc_value_calibr / 200.0f;
 	  Vadc_zero = (adc_zero_value / adcdiskr) * Vref;
 	  calibration_done = 1;
 
@@ -265,37 +254,6 @@ float ADC_autocalibrate(void)
 
 }
 
-//-----------------фильтр низких частот-------------------------------------------
-void Filter_Init(LowPassFilter_t* filter, float cutoff_hz, float sample_rate_hz) {
-    // дискретизация T_d
-    float T_d = 1.0f / sample_rate_hz;
-
-    // постоянная времени T_f (стак с частотой среза)
-    // f_cut = 1/(2*pi*T_f)-------------- T_f = 1/(2*pi*f_cut)
-    float T_f = 1.0f / (2.0f * 3.1415926535f * cutoff_hz);
-
-    // коэфы
-    filter->alpha = (2.0f * T_f - T_d) / (2.0f * T_f + T_d);
-    filter->beta = T_d / (2.0f * T_f + T_d);
-
-    // предыдущее значение кладем
-    filter->prev_input = 0.0f;
-    filter->prev_output = 0.0f;
-
-}
-//-------------------------------------------------------------------------------
-float Filter_Process(LowPassFilter_t* filter, float input) {
-    // y = alpha * y_old + beta * (u_old + u)
-    float output = filter->alpha * filter->prev_output +
-                   filter->beta * (filter->prev_input + input);
-
-    // сохраняем для следующего шага
-    filter->prev_input = input;
-    filter->prev_output = output;
-
-    return output;
-}
-//---------------------------------------------------------------------------------
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -340,14 +298,10 @@ int main(void)
   /* USER CODE BEGIN 2 */
 
   Vadc_zero = ADC_autocalibrate();
-  Vadc_zero = 2.45f;
   HAL_ADCEx_Calibration_Start(&hadc1, ADC_SINGLE_ENDED);
   HAL_ADC_Start_DMA(&hadc1, (uint32_t*)adcbuf, adc_arr_n);
   HAL_TIM_Base_Start_IT(&htim3);
   HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_1);
-
-  // ИНИЦИАЛИЗАЦИЯ ФИЛЬТРОВ
-   Filter_Init(&current_filter, FILTER_CUTOFF_CURRENT_HZ, SAMPLE_RATE_HZ);
 
 // вызов функция инициализации предыдущего угла
  //prev_angle_deg = Prev_angle_Init(); // кладем в prev_angle_deg угол, переменная != 0
@@ -371,11 +325,7 @@ int main(void)
 	 				adc_accum = 0;
 
 	 				Vadc = (adc_average / adcdiskr) * Vref;
-	 				float I_raw = (Vadc - Vadc_zero) / sens_cur;
-
-	 				// фильтруем
-	 				I = Filter_Process(&current_filter, I_raw);
-	 				// I = (Vadc - Vadc_zero) / sens_cur;
+	 				 I = (Vadc - Vadc_zero) / sens_cur;
 	 			}
 	  }
 //static uint16_t uart_div = 0; // uart в цикле не юзать
